@@ -1,0 +1,237 @@
+<header class="scroll">
+
+    <div class="wrap">
+
+        <div class="logo">
+            <a class="tab-item-link" [routerLink]="[ '/']">
+                <img src="/assets/img/logo.png">
+            </a>
+        </div>
+        <nav>
+            <div class="navTrigger">
+                <i></i><i></i><i></i>
+            </div>
+            <ul id="primary-menu" class="sub-menu">
+                <li id="menu-item-248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-248"><a [routerLink]="[ '/trieur-dashboard']">Tableau de bord</a></li>
+                <li id="menu-item-246" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-246"><a [routerLink]="[ '/distribution/assigned']">Gérer mes sacs</a></li>
+                <li id="menu-item-245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-245"><a [routerLink]="[ '/personal-coach']">Coach</a></li>
+                <li id="menu-item-247" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-247"><a [routerLink]="[ '/rewards']">Récompenses</a></li>
+                <li id="menu-item-1735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1735"><a [routerLink]="[ '/profile']">Profil</a></li>
+                <li id="menu-item-244" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-244"><a [routerLink]="[ '/contact']">Contact</a></li>
+                <li class="tab-item">
+
+                    <a [routerLink]="[ '/panier']" fileSaver [method]="'GET'" [fileName]="'consigne.pdf'" [url]="'assets/consigne.pdf'" class="tab-item-link ">
+                        <span class="nav-item-text">Consignes de tri</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="box">
+            <div class="shop">
+                <a [routerLink]="[ '/boutique']">
+
+                    <svg height="40" viewBox="0 0 39 40" width="39" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m38.8888889 9.1195728v11.2208976h-2.6493237v19.6595296h-33.59024152v-19.6595296h-2.64932368v-11.2208976h11.9034133c-.8981672-.9516845-1.4531159-2.2360164-1.4531159-3.65027806v-.16530331c0-2.92444006 2.3587005-5.30399143 5.257515-5.30399143h.1638549c1.3796172 0 2.6338148.54352817 3.57244 1.42446557.9392995-.8809374 2.193497-1.42446557 3.5737886-1.42446557h.1631806c2.8988145 0 5.257515 2.37955137 5.257515 5.30399143v.16530331c0 1.41426166-.5549487 2.69859356-1.4524416 3.65027806zm-17.758358 27.4791245h11.7375356v-16.2582269h-11.7375356zm-15.10970852 0h11.73753552v-16.2582269h-11.73753552zm15.10970852-19.6704138h14.3868593v-4.407408h-14.3868593zm-17.7590322 0h14.3868592v-4.407408h-14.3868592zm10.4502974-11.62429207v.16530331c0 1.04896175.8462461 1.90268873 1.8860163 1.90268873h2.0498712v-2.06799204c0-1.04896175-.8462461-1.90268873-1.8860163-1.90268873h-.1638549c-1.0397702 0-1.8860163.85372698-1.8860163 1.90268873zm7.3094091 0v2.06799204h2.0498713c1.0397702 0 1.8860163-.85372698 1.8860163-1.90268873v-.16530331c0-1.04896175-.8462461-1.90268873-1.8860163-1.90268873h-.1631806c-1.0404445 0-1.8866907.85372698-1.8866907 1.90268873z"
+                fill-rule="evenodd"></path>
+            </svg>
+                </a>
+            </div>
+            <div class="profil" title="Logout" (click)="logout()">
+                <a>
+
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve">
+           <g>
+             <g>
+               <g>
+                 <path d="M155,6.5c-30.147,0-58.95,9.335-83.294,26.995c-2.789,2.023-3.547,5.853-1.739,8.787L92.83,79.374
+                   c0.962,1.559,2.53,2.649,4.328,3.004c1.796,0.354,3.661-0.054,5.145-1.129c14.23-10.323,31.069-15.78,48.698-15.78
+                   c45.783,0,83.03,37.247,83.03,83.03c0,45.783-37.247,83.03-83.03,83.03c-17.629,0-34.468-5.456-48.698-15.78
+                   c-1.484-1.076-3.349-1.486-5.145-1.129c-1.798,0.355-3.366,1.444-4.328,3.004l-22.863,37.093
+                   c-1.808,2.934-1.05,6.763,1.739,8.787C96.05,281.165,124.853,290.5,155,290.5c78.299,0,142-63.701,142-142S233.299,6.5,155,6.5z"
+                   />
+                 <path d="M90.401,201.757c1.147-2.142,1.021-4.74-0.326-6.76l-15.463-23.195h93.566c12.849,0,23.302-10.453,23.302-23.302
+                   s-10.453-23.302-23.302-23.302H74.612l15.463-23.195c1.348-2.02,1.473-4.618,0.326-6.76c-1.146-2.141-3.377-3.478-5.806-3.478
+                   H40.019c-2.201,0-4.258,1.1-5.479,2.933L1.106,144.847c-1.475,2.212-1.475,5.093,0,7.306l33.433,50.149
+                   c1.221,1.832,3.278,2.933,5.479,2.933h44.577C87.025,205.235,89.256,203.898,90.401,201.757z"/>
+               </g>
+             </g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<div class="main tpl-shop ">
+    <header class=" scroll">
+    </header>
+    <div class="main-shop content ">
+        <div class="checkout-container ">
+            <div class="wrap">
+
+                <h1>Mon panier</h1>
+                <p class="intro ">Vérifiez que toutes vos informations sont correctes avant de valider votre commande.</p>
+                <div style="font-family: Ubuntu;
+            font-size: 28px;
+            color: #37e6c7;
+            letter-spacing: 0;
+            line-height: 48px;
+            font-weight: 300;
+            margin-bottom: 30px;
+            text-align: center">Mes Points Disponible : {{availablePoints}} GC Points</div>
+
+
+
+                <form (ngSubmit)="onSubmit(f)" #f="ngForm" [(ngForm)]="myForm" name="checkout" class="">
+                    <section class="recap-order ">
+                        <div class="cart-products-list">
+                            <div class="cart-product-item " *ngFor="let item of cartItems">
+
+                                <div class="product-content">
+                                    <div class="product-details">
+                                        <div class="product-picture">
+                                            <div class="picture " [ngStyle]="{'background-image':'url('+item.pictureUrl+')'}"> </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-name ">
+                                                {{item.name}}
+                                            </div>
+                                            <p class="product-partner">
+                                                <span class="icon">
+                            <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g id="icon/partner" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path
+                                  d="M57.9032704,81.9476779 C57.7277056,81.982009 57.5462791,82 57.3606443,82 C57.1750095,82 56.993583,81.982009 56.8180182,81.9476779 L44.8907317,81.9476779 C44.7151669,81.982009 44.5337403,82 44.3481054,82 C44.1624707,82 43.9810442,81.982009 43.8054795,81.9476779 L24.4261773,81.9476779 C22.8757431,81.9476779 21.6188678,80.6926791 21.6188678,79.1445596 L21.6188678,48.6888528 C19.3551403,46.9954403 17.5473344,44.0784822 16.1605896,40.1048427 C16.0284166,39.7261084 15.9823866,39.3382346 16.0121941,38.9625186 C15.9600848,38.4103439 16.0729526,37.8301789 16.3900163,37.2903901 L26.3199962,20.3849849 C26.8239344,19.5270498 27.7454413,19 28.7415383,19 L72.5158268,19 C73.5233366,19 74.453587,19.5390935 74.9533755,20.4125945 L84.6260918,37.3179997 C85.5473975,38.9282036 84.6715135,40.8771257 83.03262,41.3855273 C82.4520461,44.0400574 81.4493565,46.168757 80.0383195,47.6890657 L80.0383195,79.1445596 C80.0383195,80.6926791 78.7814443,81.9476779 77.2310101,81.9476779 L57.9032704,81.9476779 Z M60.1679538,76.3414413 L74.4237006,76.3414413 L74.4237006,50.3578217 C74.1268197,50.3824927 73.8229772,50.3949251 73.5122054,50.3949251 C70.1123351,50.3949251 67.3725366,48.9003924 65.322296,46.1150063 C63.4644966,48.8914598 60.8818371,50.3949251 57.5879213,50.3949251 C54.3037772,50.3949251 51.6881624,48.8977135 49.7517453,46.1210495 C47.82478,48.8973533 45.2218456,50.3949251 41.9510609,50.3949251 C38.6611684,50.3949251 36.1093257,48.8844099 34.307944,46.1037327 C32.4057163,48.7416154 30.0591276,50.2230987 27.2334867,50.380859 L27.2334867,76.3414413 L41.5410089,76.3414413 L41.5422967,59.0564511 C41.6840475,54.7272301 45.1617318,52.6374197 50.5178275,52.6374197 C55.7244732,52.6374197 59.2450861,54.5449243 60.1058144,58.5615336 L60.1679538,59.1480471 L60.1679538,76.3414413 Z M54.5533349,76.3414413 L54.5533349,59.5248675 C54.243801,58.7234262 53.1532025,58.2436563 50.5178275,58.2436563 C47.8094882,58.2436563 47.1740255,58.6255187 47.1554165,59.1480473 L47.1554153,76.3414413 L54.5533349,76.3414413 Z M25.2226731,44.3424898 C25.4787393,44.4180025 25.7195621,44.5289939 25.9394324,44.6697636 C26.2002373,44.7497831 26.4623024,44.7886884 26.7251661,44.7886884 C28.0547242,44.7886884 29.3616278,43.7923603 30.5861529,41.5116418 L22.8546492,41.5116418 C23.6178296,42.9266524 24.4119384,43.8474481 25.2226731,44.3424898 Z M77.2174471,41.5116418 L69.0343157,41.5116418 C70.2157344,43.8004595 71.693291,44.7886884 73.5122054,44.7886884 C75.2665454,44.7886884 76.4748404,43.8569534 77.2174471,41.5116418 Z M61.4758008,41.5116418 L53.5316188,41.5116418 C54.6115443,43.8114017 55.958008,44.7886884 57.5879213,44.7886884 C59.2021018,44.7886884 60.4905926,43.8228817 61.4758008,41.5116418 Z M45.9659101,41.5116418 L38.2082878,41.5116418 C39.1285081,43.8313671 40.3691267,44.7886884 41.9510609,44.7886884 C43.5592497,44.7886884 44.8932354,43.8121704 45.9659101,41.5116418 Z M30.349561,24.6062366 L23.7125999,35.9054052 L77.3515305,35.9054052 L70.8865182,24.6062366 L30.349561,24.6062366 Z"
+                                  id="Combined-Shape" fill="#707787" fill-rule="nonzero"></path>
+                              </g>
+                            </svg>
+                          </span>
+                                                <span class="name ">{{item.partenaire}}</span>
+                                            </p>
+                                            <p class="stock-city">
+                                                <span class="icon">
+                            <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1"
+                              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                              <g id="icon/localisation" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <path
+                                  d="M49.9994185,19.8581838 C43.5356257,19.8581838 37.4579392,22.3947774 32.8886261,26.9981382 C23.4534424,36.5047989 23.4534424,51.9715758 32.8886261,61.4770648 L49.9994185,78.7153565 L67.1113739,61.4770648 C76.5465576,51.9715758 76.5465576,36.5047989 67.1113739,26.9981382 C66.9613506,26.8481687 66.8101644,26.6993708 66.6578152,26.5529163 C63.5422158,23.5699291 59.6811521,21.4726993 55.4991084,20.4932109 C53.6976663,20.0725933 51.8473794,19.8581838 49.9994185,19.8581838 Z M49.9994185,87 L28.7763607,65.6188008 C17.0745464,53.8297917 17.0745464,34.646583 28.7763607,22.8564023 C34.4446813,17.1458447 41.9818964,14 49.9994185,14 C52.2904714,14 54.5838502,14.2647899 56.8144286,14.7873399 C62.0059312,16.0023272 66.7973717,18.6045325 70.6700651,22.3127628 C70.8596294,22.4943665 71.0422158,22.6736269 71.2236393,22.8564023 C82.9254536,34.646583 82.9254536,53.8297917 71.2236393,65.6188008 L49.9994185,87 Z"
+                                  id="Fill-1" fill="#707787"></path>
+                              </g>
+                            </svg>
+                          </span>
+                                                <span class="name ">{{item.city}}</span>
+                                            </p>
+                                        </div>
+                                        <div class="product-price ">
+                                            {{item.price}} pts
+                                        </div>
+                                    </div>
+
+                                    <div class="additional-information ">
+                                        <p>Nous avons besoin d'informations complémentaires :</p>
+                                        <div class="input-wrapper">
+                                            <label>Nom - Prénom</label>
+                                            <input type="text" [(ngForm)]="jadi" name="name" required placeholder="Nom - Prénom du participant" autocomplete="name">
+                                        </div>
+                                    </div>
+
+                                    <div class="add-remove" (click)="removeProductFromStorageCart(item)">
+                                        <div class="remove-product">
+                                            <svg height="100" viewBox="0 0 100 100" width="100" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="m18.3993115 30.5254091c-1.2874354 0-2.3993115-1.0542635-2.3993115-2.4013781 0-1.3471145 1.0533563-2.4013781 2.3993115-2.4013781h4.7986231 13.5765921v-7.3212748c0-1.3471145 1.0533563-2.4013781 2.3993115-2.4013781h21.6523236c1.3459552 0 2.3993115 1.0542636 2.3993115 2.4013781v7.3212748h13.5765921 4.7986231c1.3459552 0 2.3993115 1.0542636 2.3993115 2.4013781 0 1.3471146-1.0533563 2.4013781-2.3993115 2.4013781h-2.6333907l-6.1445784 51.3660638c-.1755593 1.2299741-1.1703958 2.1085271-2.3993115 2.1085271h-40.8468158c-1.2289157 0-2.282272-.878553-2.3993115-2.1085271l-6.1445784-51.3660638zm23.1738382-9.7226529v4.9198967h16.8537006v-4.9198967zm32.5370052 9.7226529h-48.2203098l5.7934595 48.7304049h36.6333908zm-32.0688468 41.4091301c-1.3459553 0-2.3993115-1.0542636-2.3993115-2.4013781v-28.7579673c0-1.3471146 1.0533562-2.4013781 2.3993115-2.4013781 1.3459552 0 2.3993115 1.0542635 2.3993115 2.4013781v28.7579673c0 1.3471145-1.0533563 2.4013781-2.3993115 2.4013781zm15.9173838 0c-1.2874354 0-2.3993115-1.0542636-2.3993115-2.4013781v-28.7579673c0-1.3471146 1.0533563-2.4013781 2.3993115-2.4013781 1.3459553 0 2.3993115 1.0542635 2.3993115 2.4013781v28.7579673c0 1.3471145-1.0533562 2.4013781-2.3993115 2.4013781z">
+                          </path>
+                        </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <span class="label">
+                    Total
+                  </span>
+                            <span class="price ">
+                    {{balance}} PTS
+                  </span>
+                        </div>
+
+                        <div class="count-pts-account">
+
+                            <div *ngIf="availablePoints<balance">Je ne dispose pas d'assez de points Green Chain. Triez plus pour en gagner plus !</div>
+                        </div>
+                    </section>
+                    <section class="proceed-checkout ">
+
+                        <button [routerLink]="['/boutique/catalog']" class="secondary" href="#!">Je continue mon shopping</button>
+
+                        <button (click)="validateShopping()" class="cta orange-blue pay-button" [disabled]="availablePoints<balance || balance==0" type="submit">
+                <span  class="desktop">Je valide ma commande</span>
+                <span class="mobile">Valider</span>
+              </button>
+
+
+
+                    </section>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<alert class="alert-modal success opened" *ngIf="successAlert">
+    <span class="alert-modal-text ">
+        Votre commande est bien passée ! 
+      </span>
+
+    <button [routerLink]="['/rewards']" class="btn " type="button" name="button">let's go</button>
+</alert>
+
+<alert class="alert-modal error opened" *ngIf="errorAlert">
+    <span class="alert-modal-text ">
+          {{errorMsg}} ! 
+        </span>
+
+    <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
+</alert>

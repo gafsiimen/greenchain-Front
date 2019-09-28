@@ -1,0 +1,445 @@
+<header class="home-page">
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <a class="navbar-brand" href="#">
+                <i class="fas nav-link fa-recycle"> GreenChain</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-align-right text-light"></i>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"></div>
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink]="[ '/devenir-trieur']"> DEVENIR TRIEUR</a>
+
+                        <span class="sr-only">(current)</span>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="[ '/devenir-coach']"> DEVENIR COACH</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="[ '/comment-ca-marche']">COMMENT ÇA MARCHE ?</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/']" fileSaver [method]="'GET'" [fileName]="'consigne.pdf'" [url]="'assets/consigne.pdf'">CONSIGNE DE TRI</a>
+                    </li>
+
+
+
+                    <li class="nav-item shop">
+                        <button class="popup" [routerLink]="[ '/boutique']"> <img src="/assets/img/shop.png" class="shop-icon"> </button>
+
+                        <!-- <img src="/assets/img/shop.png" class="shop-icon"> -->
+                    </li>
+
+                    <li class="nav-item profile">
+
+                        <button class="popup" id="popup" (click)="popit()"> <img src="/assets/img/profile.png"> </button>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-7 col-sm-12  text-white">
+                <br>
+                <h1>Recycler 100% du plastique… impossible ?</h1>
+                <h1> On a déjà commencé </h1>
+                <!-- <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere accusamus eum dignissimos ipsa sequi
+          expedita.
+        </p> -->
+                <button class="btn btn-light px-5 py-2 primary-btn" (click)="popit()">
+          Rejoignez-nous !
+        </button>
+                <span class="nav-enter-here"></span>
+            </div>
+            <div class="col-md-5 col-sm-12  h-25">
+                <img src="/assets/img/Logo final greenchain.png" alt="Logo GreenChain" />
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</header>
+
+<main>
+    <div class="main-informations" id="ancre">
+        <div class="wrap">
+
+            <div class="box">
+
+
+
+                <div class="infos">
+                    <h2>
+                        Vous triez.<br><span class="light">Nous recyclons,</span><br><span class="light"> Nous
+              récompensons :</span><br> Tout le monde<br> y gagne ! </h2>
+                    <div class="text">
+                        <p><span style="font-weight: 400;">Rejoignez la communauté GreenChain près de chez vous !
+              </span><span style="font-weight: 400;">Ensemble, vous déposerez vos bouteilles en
+                plastique chez le Coach de votre quartier. </span></p>
+                        <p>&nbsp;</p>
+                        <p><span style="font-weight: 400;">Là, toutes les semaines, GreenChain les récupère et leur offre
+                une seconde vie. </span><span style="font-weight: 400;">C’est garanti : elles seront
+                toutes recyclées, en Abidjan et à 100% !</span></p>
+                        <p>&nbsp;</p>
+                        <p><span style="font-weight: 400;">Ce n’est pas tout ! Cette bonne action donne droit à des
+                places de cinéma, des billets pour un match de foot, des réductions sur vos
+                abonnements de transport, et plein d’autres choses encore !</span></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="container-fluid text-center">
+        <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+            <div class="rect">
+                <img src="/assets/img/userdd.png">
+                <h1>{{publicStats?.confirmed_coachs}}</h1>
+                <p>Coachs</p>
+            </div>
+            <div class="rect">
+                <img src="/assets/img/userdd.png">
+                <h1>{{publicStats?.trieurs}}</h1>
+                <p>Trieurs</p>
+            </div>
+            <div class="rect jiji">
+                <img src="/assets/img/zebladd.png">
+                <h1>{{publicStats?.AT_collected}}</h1>
+                <p>Sacs collectés</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="greenChain-is"></div>
+
+    <div class="circle-blue"></div>
+    <div class="circle-picture"></div>
+
+
+    <section class="section-1">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div class="pray">
+                        <img src="/assets/img/garbage.jpg" alt="garbage" class="imgd" />
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="panel text-left">
+                        <h1 style="color: #dd2476">GreenChain c’est quoi ?</h1>
+                        <p class="pt-4">
+                            <p><span style="font-weight: 400;"> <strong> Au départ, c’est un constat.</strong><br>
+                </span><span style="font-weight: 400;">Les villes produisent des monceaux de déchets : c’est là
+                  qu’on consomme le plus et qu’on trie le moins. Pour les matières plastiques, le taux de
+                  recyclage dépasse difficilement <strong>20%</strong>.</span></p>
+                            <p><span style="font-weight: 400;">Face à cette situation, des communautés de citadins ne voulaient
+                  plus rester les bras croisés. Ils ont décidé de mettre leurs forces en commun pour changer
+                  de cap, une bouteille à la fois, c’est la naissance de GreenChain !<br>
+                </span><span style="font-weight: 400;">Aujourd’hui, nous commençons par les bouteilles en
+                  plastique. Demain, nous irons plus loin, petit à petit…</span>
+                            </p>
+                            <a [routerLink]="[ '/comment-ca-marche']" class="cta orange-white">
+                                <span>en savoir plus</span>
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="box text-center ">
+
+        <div class="sorter text-center ">
+            <img style="height: 200px;" src="/assets/img/trieur_sac.png" alt="illustration trieur">
+            <h3><a [routerLink]="[ '/devenir-trieur']">Je veux devenir <span>Trieur</span></a></h3>
+            <p>
+            </p>
+
+            <div class="text-center alex " style="text-align: center; margin-left: 100px; ">
+                <p class="text-center" style="font-weight: 400;  max-width:440px;    color: #707787; font-size: 16px;
+                        
+                        line-height: 30px;
+                        letter-spacing: .5px;">Choisissez votre <strong>Coach </strong> à côté de chez vous.<br> Vous pouvez commencer à trier avec votre communauté dès demain et en plus ça donne droit à des récompenses !
+
+                </p>
+            </div>
+
+        </div>
+
+        <div class="coach text-center ">
+            <img style="height: 200px;" src="/assets/img/Picto_Coach.png" alt="illustration coach">
+            <h3><a [routerLink]="[ '/devenir-coach']">Je veux devenir <span>Coach</span></a></h3>
+            <p>
+            </p>
+            <p class="text-center" style="font-weight: 400; margin: auto ;  max-width:450px;   color: #707787; font-size: 16px;
+                        
+                        line-height: 30px;
+                        letter-spacing: .5px;">Devenez le <strong>référent GreenChain</strong> de votre quartier.<br>
+                <span>Avec vos voisins, vous avez désormais un moyen concret
+          pour réduire la pollution dans votre ville !</span>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="purchase text-center">
+        <h1>Moins de <span style="color: #dd2476">pollution</span>, plus de <span style="color: #37e6c7">cadeaux</span> !</h1>
+        <p>
+            Sur la boutique <span style="color: #0045f1; font-weight: bold">GreenChain</span>, on échange ses points contre des récompenses. Il y en a pour tous les goûts : vérifiez par vous même…
+        </p>
+        <div class="cards">
+            <div class="d-flex flex-row justify-content-center flex-wrap">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="title">
+                            <h5 class="card-title">Mode</h5>
+                        </div>
+                        <p class="card-text">
+                            <img src="/assets/img/mode.jpg" alt="mode" />
+                        </p>
+                        <div class="pricing">
+
+                            <a [routerLink]="[ '/boutique/catalog']" [queryParams]="{category:Mode}" class="btn btn-dark px-5 py-2 primary-btn mb-5">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="title">
+                            <h5 class="card-title">Alimentation</h5>
+                        </div>
+                        <p class="card-text">
+                            <img src="/assets/img/alimentation.jpg" alt="Alimentation" />
+                        </p>
+                        <div class="pricing">
+
+                            <a [routerLink]="[ '/boutique/catalog']" [queryParams]="{category:Alimentation}" class="btn btn-dark px-5 py-2 primary-btn mb-5">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="title">
+                            <h5 class="card-title">Expérience</h5>
+                        </div>
+                        <p class="card-text">
+                            <img src="/assets/img/experience.jpg" alt="experience" />
+                        </p>
+                        <div class="pricing">
+
+                            <a [routerLink]="[ '/boutique/catalog']" class="btn btn-dark px-5 py-2 primary-btn mb-5">Découvrir</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <section class="section-3 container-fluid p-0 text-center" id="div-hidden-test" style="display: none; ">
+        <!-- <button id="popup" (click)="popit()"> Open Popup</button> -->
+        <!--  signIN     -->
+
+
+
+
+
+
+
+        <div class="all">
+            <div class="signin-signup-div" id="signin-signup-div">
+
+                <div class="form-container sign-up-container">
+                    <div class="close" id='closeSignin' (click)="closein()">+</div>
+
+                    <form class="form-sign-fn-up" #f="ngForm">
+                        <div class="content">
+                            <div class="roles">
+                                <div class="role">
+                                    <h1 class="inscrivez-vous">
+                                        Inscrivez-vous
+                                    </h1>
+                                    <h4 class="title">Quel rôle souhaitez-vous avoir ?</h4>
+                                    <label class="sorter">
+                          <input type="radio" name="role" [(ngModel)]="signupForm.role" value="trieur" required>
+                          Devenir Trieur
+                      </label>
+
+                                    <label>
+                          <input type="radio" name="role" [(ngModel)]="signupForm.role"  value="coach" required>
+                          Devenir Coach
+                      </label>
+
+                                </div>
+
+                                <div class="city">
+                                    <h4 class="title">Et où habitez-vous ?</h4>
+                                    <p class="desc"></p>
+                                    <div>
+                                        <select class="select-wrapper" ngModel id="cities" name="city" required>
+                              <option class="options-list" value="" 
+                              disabled="" selected="">
+                                Choisissez votre
+                                  ville</option>
+                              <option class="options-list" 
+                             >Abidjan</option>
+                           
+                          </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <input class="input-sign-in-all" type="email" [(ngModel)]="signupForm.email" email required placeholder="Votre adresse mail" name="email" />
+                        <input class="input-sign-in-all" type="password" minlength="6" required [(ngModel)]="signupForm.password" placeholder="Votre mot de passe" name="password" />
+                        <button class="sign-in" type="button" [disabled]="!isValid(f)" (click)="onSignUp(f)">Je m'inscris</button>
+
+                    </form>
+
+                </div>
+                <div class="form-container sign-in-container">
+                    <form #g="ngForm" class="form-sign-fn-up">
+                        <h1 class="inscrivez-vous">Se Connecter</h1>
+                        <div class="login">
+                            <div *ngIf="error != ''" class="alert alert-danger">
+
+                                <strong>Opps!</strong>
+                                <p>{{error}}</p>
+
+                            </div>
+                            <div *ngIf="successfulLogin ==true" class="alert alert-success" role="alert">
+
+                                <alert type="success">
+                                    <strong>Bienvenue {{firstname}} ^^ </strong> <br>
+
+                                </alert>
+                            </div>
+                        </div>
+                        <input class="input-sign-in-all" name="email" type="email" required [(ngModel)]="loginData.email" placeholder="Votre adresse email" />
+                        <input class="input-sign-in-all" name="password" type="password" required minlength="6" [(ngModel)]="loginData.password" placeholder="Votre mot de passe" />
+                        <a class="forgot-yout-password" href="#">Mot de passe oublié?</a>
+                        <button class="sign-in" type="button" [disabled]="!isValid(g)" (click)="onLogin()">Se Connecter </button>
+
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Soyez le Bienvenue!</h1>
+                            <p class="to-keep">Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles.
+                            </p>
+                            <input class="sign-in ghost" id="signIn" type="button" (click)="signInButton()" value="Se Connecter">
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <div class="close" id='closeSignin' (click)="closein()">+</div>
+                            <h1>Salut l'ami!</h1>
+                            <p class="enter-your">Entrez vos informations personnelles et commencez le voyage avec nous</p>
+                            <input class="sign-in ghost" id="signUp" type="button" (click)="signUpButton()" value="S'inscrire">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--  signIN     -->
+
+</main>
+
+
+
+
+
+<app-unauthed-footer></app-unauthed-footer>
+
+<!-- <footer>
+    <div class="container-fluid p-0">
+        <div class="row text-left">
+            <div class="box">
+                <div class="navigation">
+
+                    <div class="wrap">
+
+                        <div class="box">
+
+                            <div class="logo">
+                                <img src="/assets/img/Logo final greenchain.png" alt="logo greenchain">
+                            </div>
+
+                            <nav>
+                                <ul id="secondary-menu" class="sub-menu">
+                                    <li id="menu-item-48" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-48">
+                                        <a [routerLink]="[ '/devenir-trieur']">DEVENIR TRIEUR</a></li>
+                                    <li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55">
+                                        <a [routerLink]="[ '/devenir-coach']">DEVENIR COACH</a></li>
+                                    <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
+                                        <a [routerLink]="[ '/comment-ca-marche']">COMMENT ÇA MARCHE</a></li>
+
+
+                                    <li id="menu-item-840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840">
+                                        <a [routerLink]="[ '/boutique']">BOUTIQUE</a></li>
+
+
+                                </ul>
+                            </nav>
+
+                            <div style="clear: both;"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col-md-5 col-sm-12">
+                <h4 class="text-light">Newsletter</h4>
+                <p class="text-muted">Stay Updated</p>
+                <form class="form-inline">
+                    <div class="col pl-0">
+                        <div class="input-group pr-5">
+                            <input type="text" class="form-control bg-dark text-white" id="inlineFormInputGroupUsername2" placeholder="Email">
+
+                            <div class="input-group-prepend">
+
+                                <div class="input-group-text">
+
+                                    <button class="newsletter-button" type="submit"><i style="color: #212529;" class="fas fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2 col-sm-12">
+                <h4 class="text-light">Follow Us</h4>
+                <p class="text-muted">Let us be social</p>
+                <div class="column text-light">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer> -->

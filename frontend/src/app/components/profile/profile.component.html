@@ -1,0 +1,296 @@
+<!-- <header>
+    <div class="header-content ">
+        <div class="header-top">
+
+            <div class="nav-trigger not-active">
+                <i></i><i></i><i></i>
+            </div>
+
+            <div class="logo">
+                <a class="tab-item-link" [routerLink]="[ '/']">
+                    <img src="/assets/img/logo.png">
+                </a>
+            </div>
+
+            <ul class="tab-list-nav not-active">
+                <li class="tab-item ">
+                    <a class="tab-item-link" [routerLink]="[ '/trieur-dashboard']">
+                        <span class="tab-item-text">Tableau de bord</span>
+                    </a>
+                </li>
+
+                <li class="tab-item ">
+                    <a class="tab-item-link" [routerLink]="[ '/distribution/assigned']">
+                        <span class="tab-item-text">Gérer mes sacs</span>
+                    </a>
+                </li>
+                <li class="tab-item ">
+                    <a class="tab-item-link" [routerLink]="[ '/personal-coach']">
+                        <span class="tab-item-text">Coach</span>
+                    </a>
+                </li>
+                <li class="tab-item ">
+                    <a class="tab-item-link" [routerLink]="[ '/rewards']">
+                        <span class="tab-item-text">Récompenses</span>
+                    </a>
+                </li>
+
+                <li class="tab-item  active">
+                    <a class="tab-item-link" [routerLink]="[ '/profile']">
+                        <span class="tab-item-text">Profil</span>
+                    </a>
+                </li>
+                <li class="tab-item " hide-role="global_manager, city_manager">
+                    <a class="tab-item-link" [routerLink]="[ '/contact']">
+                        <span class="nav-item-text">Contact</span>
+                    </a>
+                </li>
+                <li class="tab-item">
+
+                    <a [routerLink]="[ '/profile']" fileSaver [method]="'GET'" [fileName]="'consigne.pdf'" [url]="'assets/consigne.pdf'" class="tab-item-link ">
+                        <span class="nav-item-text">Consignes de tri</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="header-shop-wrapper">
+                <a class="icon " [routerLink]="[ '/boutique']"><svg viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg" id="shop">
+            <path
+              d="M85 30.415v20.198h-4.77V86H19.77V50.613H15V30.415h21.426c-1.617-1.713-2.615-4.025-2.615-6.57v-.298c0-5.264 4.246-9.547 9.464-9.547h.295c2.482 0 4.74.978 6.43 2.564C51.69 14.978 53.947 14 56.43 14h.294c5.218 0 9.463 4.283 9.463 9.547v.298c0 2.545-1 4.857-2.615 6.57zM53.035 79.878h21.128V50.613H53.035zm-27.198 0h21.128V50.613H25.837zM53.035 44.47H78.93V36.54H53.036zm-31.966 0h25.895V36.54H21.07zm18.81-20.923v.298c0 1.888 1.522 3.425 3.394 3.425h3.69v-3.723c0-1.888-1.523-3.425-3.395-3.425h-.296c-1.872 0-3.395 1.537-3.395 3.425zm13.156 0v3.723h3.69c1.872 0 3.395-1.537 3.395-3.425v-.298c0-1.888-1.522-3.425-3.394-3.425h-.294c-1.873 0-3.396 1.537-3.396 3.425z"
+              fill-rule="evenodd"></path>
+          </svg></a>
+            </div>
+
+
+            <div title="Logout" class="header-account-identification header-user-wrapper">
+                <div class="icon " (click)="logout()">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve">
+           <g>
+             <g>
+               <g>
+                 <path d="M155,6.5c-30.147,0-58.95,9.335-83.294,26.995c-2.789,2.023-3.547,5.853-1.739,8.787L92.83,79.374
+                   c0.962,1.559,2.53,2.649,4.328,3.004c1.796,0.354,3.661-0.054,5.145-1.129c14.23-10.323,31.069-15.78,48.698-15.78
+                   c45.783,0,83.03,37.247,83.03,83.03c0,45.783-37.247,83.03-83.03,83.03c-17.629,0-34.468-5.456-48.698-15.78
+                   c-1.484-1.076-3.349-1.486-5.145-1.129c-1.798,0.355-3.366,1.444-4.328,3.004l-22.863,37.093
+                   c-1.808,2.934-1.05,6.763,1.739,8.787C96.05,281.165,124.853,290.5,155,290.5c78.299,0,142-63.701,142-142S233.299,6.5,155,6.5z"
+                   />
+                 <path d="M90.401,201.757c1.147-2.142,1.021-4.74-0.326-6.76l-15.463-23.195h93.566c12.849,0,23.302-10.453,23.302-23.302
+                   s-10.453-23.302-23.302-23.302H74.612l15.463-23.195c1.348-2.02,1.473-4.618,0.326-6.76c-1.146-2.141-3.377-3.478-5.806-3.478
+                   H40.019c-2.201,0-4.258,1.1-5.479,2.933L1.106,144.847c-1.475,2.212-1.475,5.093,0,7.306l33.433,50.149
+                   c1.221,1.832,3.278,2.933,5.479,2.933h44.577C87.025,205.235,89.256,203.898,90.401,201.757z"/>
+               </g>
+             </g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           <g>
+           </g>
+           </svg>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header> -->
+
+<app-authed-navbar></app-authed-navbar>
+<div class="main-content ">
+    <div class="deny-layer"></div>
+    <div class="content ">
+        <section class="section default">
+
+            <div>
+                <main class="personal-space profile ">
+
+                    <nav class="profile-nav">
+                        <ul class="profile-nav-tabs">
+                            <li class="profile-one-tab">
+                                <a class="profile-one-tab-link">Coordonnées</a>
+                            </li>
+                            <li class="profile-one-tab">
+
+                            </li>
+                            <li class="profile-one-tab">
+                                <a class="profile-one-tab-link">Adresse</a>
+                            </li>
+                            <li class="profile-one-tab">
+                                <a class="profile-one-tab-link">Rôle</a>
+                            </li>
+                            <li class="profile-one-tab">
+                            </li>
+                            <li class="profile-one-tab">
+                                <a class="profile-one-tab-link" hide-role="global_manager">Parrainage</a>
+                            </li>
+                            <li class="profile-one-tab">
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <form #f="ngForm" [(ngForm)]="myForm" class="profile-tab  " name="profileForm" id="scrollAreaProfile">
+                        <section class="profile-identity" id="profileIdentity">
+                            <div class="profile-identity-details">
+
+                                <div *ngIf="!user?.avatar" class="profile-photo " style="background-image: url(&quot;/assets/img/no-avatar.png&quot;);">
+                                    <input type="file" style="display: none;" (change)="onFileSelected($event)" accept="image/png, image/jpeg" #fileInput>
+                                    <span (click)="fileInput.click()">Modifier</span>
+                                </div>
+
+
+                                <div *ngIf="user?.avatar" class="profile-photo " [ngStyle]="{'background-image':'url('+URL+user?.avatar+')'}">
+                                    <input type="file" style="display: none;" (change)="onFileSelected($event)" accept="image/png, image/jpeg" #fileInput>
+                                    <span (click)="fileInput.click()">Modifier</span>
+                                </div>
+                                <div class="profile-information">
+                                    <p class="profile-name">
+                                        <span>{{user?.firstname}}</span>
+                                        <span> {{user?.lastname}}</span>
+                                    </p>
+
+                                    <p class="profile-data " hide-role="global_manager"> - {{user?.city}}</p>
+                                    <p class="profile-data "></p>
+                                </div>
+                            </div>
+                            <button type="button" class="tertiary"><span>Désactiver le compte</span></button>
+                        </section>
+
+
+
+                        <section class="profile-contact">
+                            <div class="profile-form">
+                                <h3 class="h3">Coordonnées </h3>
+                                <div class="input-column">
+
+
+                                    <div class="input-wrapper">
+                                        <label>Nom *</label>
+                                        <input type="text" placeholder="Nom" name="name" [(ngModel)]="user.lastname" class=" " required>
+                                        <div class="input-error">
+                                            Ce champs est requis
+                                        </div>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label>Prénom*</label>
+                                        <input type="text" placeholder="Prénom" name="firstName" [(ngModel)]="user.firstname" class="" required>
+                                        <div class="input-error">
+                                            Ce champs est requis
+                                        </div>
+                                    </div>
+
+                                    <div class="input-wrapper">
+                                        <label>Email *</label>
+                                        <input type="text" placeholder="" [(ngModel)]="user.email" name="emailDisabled" disabled="" required>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label>Téléphone *</label>
+                                        <input type="text" placeholder="n° téléphone" name="phone" [(ngModel)]="user.tel" required class="">
+                                        <div class="input-error">
+                                            Le numéro doit être valide
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="star">(Champs obligatoires *)</p>
+                            </div>
+                        </section>
+
+
+                        <section class="profile-contact">
+                            <div class="profile-form">
+                                <h3 class="h3">Adresse *</h3>
+                                <div class="input-wrapper">
+                                    <label>Adresse Postale *</label>
+                                    <input type="text" placeholder="Adresse 1" name="adress1" required [(ngModel)]="user.addresses[0].primary_address">
+                                </div>
+
+                                <div class="input-wrapper">
+                                    <label>Complément d'adresse</label>
+                                    <input type="text" [(ngModel)]="user.addresses[0].additional_address" placeholder="Complément d&#39;adresse. Ex: résidence, chemin etc." name="adress2">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label>Code Postal *</label>
+                                    <input type="number" placeholder="Code Postal" name="postalCode" [(ngModel)]="user.addresses[0].zip" required>
+                                </div>
+                                <div class="input-wrapper">
+                                    <label>Ville actuelle *</label>
+                                    <input type="text" placeholder="Abidjan" name="adress" [(ngModel)]="user.city" disabled="" required>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="profile-contact" id="profileRoleUpgrade">
+                            <div class="profile-form role">
+                                <h3 class="h3">Rôle</h3>
+                                <div class="input-row">
+                                    <div class="input-wrapper">
+                                        <span>Vous êtes Trieur !</span>
+
+                                        <button [disabled]="pendingCoach==true" type="button" class="btn " 
+                                        [routerLink]="[ '/register-coach']" >Devenir Coach</button>
+                                        <p *ngIf="pendingCoach==true" style="margin-top: 23px;color:#dd2476;margin-bottom:-23px" class="star">Merci d'attendre le traitement de votre demande de changement de role :)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="profile-contact " id="profileSponsor" hide-role="global_manager">
+                            <div class="profile-form sponsor">
+                                <h3 class="h3 ">Faites entrer vos amis dans la communauté Green Chain !
+                                </h3>
+                                <div class="input-column">
+                                    <div>
+                                        <p>Invitez vos amis en partageant votre code de parrainage ci-dessous, ils devront l'indiquer au moment de leur inscription ! Vous recevrez 50 PTS à chaque nouvelle inscription
+                                        </p>
+                                    </div>
+                                    <div class="input-wrapper inputSponsor">
+                                        <input type="text" placeholder="n° sponsoring" name="buttonSponsor" [(ngModel)]="myreflink" class="sponsorship-code ">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                        <div class="validate">
+                            <button type="submit" class="btn" name="button" (click)="onUpload()" [disabled]="!isValid(f)">Enregistrer les
+                modifications</button>
+                            <div>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </main>
+            </div>
+        </section>
+    </div>
+</div>
+
+<alert class="alert-modal ">
+    <pre class="alert-modal-text "></pre>
+    <button class="show-more-details " type="button" name="button">voir plus</button>
+    <button class="btn " type="button" name="button"></button>
+    <ul class="error-details ">
+    </ul>
+</alert>

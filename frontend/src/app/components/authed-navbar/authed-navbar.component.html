@@ -1,0 +1,121 @@
+<div class="header-top">
+
+    <div class="nav-trigger not-active">
+        <i></i><i></i><i></i>
+    </div>
+
+    <div class="logo">
+        <a [routerLink]="['/']" class="tab-item-link">
+            <img src="/assets/img/logo.png">
+        </a>
+    </div>
+
+    <ul class="tab-list-nav not-active">
+
+        <li class="tab-item " [routerLink]="['/trieur-dashboard']" routerLinkActive="active">
+            <a class="tab-item-link">
+                <span class="tab-item-text">Tableau de bord</span>
+            </a>
+        </li>
+
+
+        <li class="tab-item " [routerLink]="['/distribution']" routerLinkActive="active">
+            <a class="tab-item-link">
+                <span class="tab-item-text">Gérer mes sacs</span>
+            </a>
+        </li>
+        <li class="tab-item " [routerLink]="['/personal-coach']" routerLinkActive="active">
+            <a class="tab-item-link">
+                <span class="tab-item-text">Coach</span>
+            </a>
+        </li>
+
+        <li class="tab-item " [routerLink]="['/rewards']" routerLinkActive="active">
+            <a class="tab-item-link">
+                <span class="tab-item-text">Récompenses</span>
+            </a>
+        </li>
+        <li class="tab-item " [routerLink]="['/profile']" routerLinkActive="active">
+            <a class="tab-item-link">
+                <span class="tab-item-text">Profil</span>
+            </a>
+        </li>
+
+        <li class="tab-item " [routerLink]="['/contact']" routerLinkActive="active">
+            <a class="tab-item-link">
+                <span class="nav-item-text">Contact</span>
+            </a>
+        </li>
+        <li class="tab-item">
+            <a fileSaver [method]="'GET'" [fileName]="'consigne.pdf'" [url]="'assets/consigne.pdf'" class="tab-item-link ">
+                <span class="nav-item-text">Consignes de tri</span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="header-shop-wrapper">
+        <a class="icon " [routerLink]="['/boutique']"><svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
+                id="shop">
+                <path
+                    d="M85 30.415v20.198h-4.77V86H19.77V50.613H15V30.415h21.426c-1.617-1.713-2.615-4.025-2.615-6.57v-.298c0-5.264 4.246-9.547 9.464-9.547h.295c2.482 0 4.74.978 6.43 2.564C51.69 14.978 53.947 14 56.43 14h.294c5.218 0 9.463 4.283 9.463 9.547v.298c0 2.545-1 4.857-2.615 6.57zM53.035 79.878h21.128V50.613H53.035zm-27.198 0h21.128V50.613H25.837zM53.035 44.47H78.93V36.54H53.036zm-31.966 0h25.895V36.54H21.07zm18.81-20.923v.298c0 1.888 1.522 3.425 3.394 3.425h3.69v-3.723c0-1.888-1.523-3.425-3.395-3.425h-.296c-1.872 0-3.395 1.537-3.395 3.425zm13.156 0v3.723h3.69c1.872 0 3.395-1.537 3.395-3.425v-.298c0-1.888-1.522-3.425-3.394-3.425h-.294c-1.873 0-3.396 1.537-3.396 3.425z"
+                    fill-rule="evenodd"></path>
+            </svg></a>
+    </div>
+
+    <div title="Logout" class="header-account-identification header-user-wrapper">
+        <div class="icon " (click)="logout()">
+
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 297 297" style="enable-background:new 0 0 297 297;" xml:space="preserve">
+                <g>
+                    <g>
+                        <g>
+                            <path
+                                d="M155,6.5c-30.147,0-58.95,9.335-83.294,26.995c-2.789,2.023-3.547,5.853-1.739,8.787L92.83,79.374
+                 c0.962,1.559,2.53,2.649,4.328,3.004c1.796,0.354,3.661-0.054,5.145-1.129c14.23-10.323,31.069-15.78,48.698-15.78
+                 c45.783,0,83.03,37.247,83.03,83.03c0,45.783-37.247,83.03-83.03,83.03c-17.629,0-34.468-5.456-48.698-15.78
+                 c-1.484-1.076-3.349-1.486-5.145-1.129c-1.798,0.355-3.366,1.444-4.328,3.004l-22.863,37.093
+                 c-1.808,2.934-1.05,6.763,1.739,8.787C96.05,281.165,124.853,290.5,155,290.5c78.299,0,142-63.701,142-142S233.299,6.5,155,6.5z" />
+                            <path d="M90.401,201.757c1.147-2.142,1.021-4.74-0.326-6.76l-15.463-23.195h93.566c12.849,0,23.302-10.453,23.302-23.302
+                 s-10.453-23.302-23.302-23.302H74.612l15.463-23.195c1.348-2.02,1.473-4.618,0.326-6.76c-1.146-2.141-3.377-3.478-5.806-3.478
+                 H40.019c-2.201,0-4.258,1.1-5.479,2.933L1.106,144.847c-1.475,2.212-1.475,5.093,0,7.306l33.433,50.149
+                 c1.221,1.832,3.278,2.933,5.479,2.933h44.577C87.025,205.235,89.256,203.898,90.401,201.757z" />
+                        </g>
+                    </g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+                <g>
+                </g>
+            </svg>
+
+
+        </div>
+    </div>
+
+</div>

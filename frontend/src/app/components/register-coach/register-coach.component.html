@@ -1,0 +1,323 @@
+<div class="">
+
+
+  <div class="main-content">
+    <div class="deny-layer"></div>
+    <div class="content ">
+
+      <div class="onboarding-welcome-profile">
+
+
+
+
+        <h1 *ngIf="coachFormShow">Vous êtes le Coach idéal ? Prouvez le.</h1>
+        <p *ngIf="coachFormShow" class="intro">Être Coach n'est pas un rôle facile. Mais nous savons que vous en êtes
+          capable !</p>
+
+
+        <div class="onboarding-profile">
+
+
+          <section class="onboarding-profile-right">
+
+
+
+            <form #g="ngForm" class="onboarding-coach-details-form" name="onboardingCoachDetailsForm">
+              <section class="profile-contact">
+                <div class="profile-form">
+                  <h3>Profil et motivation </h3>
+
+                  <div class="input-wrapper input-wrapper-textarea">
+                    <label>Décrivez-vous en quelques lignes pour que vos futurs Trieurs sachent à qui ils s'adressent
+                      *</label>
+                    <textarea required="" class="textAreaHobbies" ngModel name="comment" forward=""
+                      placeholder="Bonjour, je suis Jean et..." rows="10" cols="50">								</textarea>
+                    <div class="input-error">
+                      Ce champs est requis
+                    </div>
+                  </div>
+
+                  <div class="input-wrapper">
+                    <label>Activité</label>
+                    <input type="text" placeholder="Concierge, vendeur..." name="activity" required ngModel>
+                  </div>
+
+                </div>
+              </section>
+
+              <section class="profile-contact">
+                <div class="profile-form">
+
+
+                  <h3>Espace de stockage disponible *</h3>
+                  <div class="storage-area">
+                    <div class="list">
+                      <label for="storage-space-2" class="storage-size">
+                        <input id="storage-space-2" type="radio" hidden="" ngModel required
+                          name="espace" value="2">
+                        <div class="box">
+                          <div class="label size">2m²</div>
+                          <div class="picture" icon="stockage_1"><svg xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 100 100" id="stockage_1">
+                              <g transform="translate(25 27)" fill="none">
+                                <path fill="#0045F1"
+                                  d="M48.217 42.416L44.12 9.246l-.005-.075.24-6.972H6.208l.243 6.874-.002.075-4.103 33.27h45.872zm2.336.962c.04.313-.058.627-.267.865-.21.235-.51.37-.825.37H1.1c-.314 0-.615-.135-.825-.372-.208-.235-.306-.55-.266-.86L4.253 9.013 3.967 1.14c-.01-.3.1-.59.308-.803C4.482.12 4.768 0 5.068 0h40.426c.3 0 .586.12.79.333.21.215.32.506.31.805l-.282 7.974 4.24 34.266z">
+                                </path>
+                                <path fill="#dd2476"
+                                  d="M48.217 42.416L44.12 9.246l-.005-.075.24-6.972H6.208l.243 6.874-.002.075-4.103 33.27z">
+                                </path>
+                                <rect width="17.187" height="4.291" x="16.71" y="5.721" fill="#FFF" stroke="#0045F1"
+                                  stroke-width="1.487" rx="2.145"></rect>
+                              </g>
+                            </svg></div>
+                          <div class="label equivalent-bags" style="visibility: visible;">32 sacs</div>
+                        </div>
+                      </label>
+                      <label for="storage-space-3" class="storage-size">
+                        <input id="storage-space-3" type="radio" hidden="" ngModel name="espace" value="3">
+                        <div class="box">
+                          <div class="label size">3m²</div>
+                          <div class="picture icon" icon="stockage_2"><svg xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 100 100" id="stockage_2">
+                              <g transform="translate(0 27)" fill="none">
+                                <path fill="#0045F1"
+                                  d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                </path>
+                                <path fill="#dd2476"
+                                  d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                </path>
+                                <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                  stroke-width="1.471" rx="2.122"></rect>
+                                <g transform="translate(50)">
+                                  <path fill="#0045F1"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                  </path>
+                                  <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.471" rx="2.122"></rect>
+                                </g>
+                              </g>
+                            </svg></div>
+                          <div class="label equivalent-bags" style="visibility: visible;">48 sacs</div>
+                        </div>
+                      </label><label for="storage-space-5" class="storage-size ">
+                        <input id="storage-space-5" type="radio" hidden="" ngModel name="espace" value="5">
+                        <div class="box">
+                          <div class="label size">5m²</div>
+                          <div class="picture icon" icon="stockage_3"><svg xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 100 100" id="stockage_3">
+                              <g fill="none">
+                                <g transform="translate(0 19) translate(25)">
+                                  <path fill="#0045F1"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                  </path>
+                                  <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.471" rx="2.122"></rect>
+                                </g>
+                                <g transform="translate(0 19) translate(50 15.441)">
+                                  <path fill="#0045F1"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                  </path>
+                                  <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.471" rx="2.122"></rect>
+                                </g>
+                                <g transform="translate(0 19) translate(0 15.441)">
+                                  <path fill="#0045F1"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                  </path>
+                                  <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.471" rx="2.122"></rect>
+                                </g>
+                              </g>
+                            </svg></div>
+                          <div class="label equivalent-bags" style="visibility: visible;">80 sacs</div>
+                        </div>
+                      </label><label for="storage-space-8" class="storage-size">
+                        <input id="storage-space-8" type="radio" hidden=""  ngModel name="espace"
+                          value="8">
+                        <div class="box">
+                          <div class="label size">8m²</div>
+                          <div class="picture icon" icon="stockage_4"><svg xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 100 100" id="stockage_4">
+                              <g fill="none">
+                                <g transform="translate(0 15) translate(25)">
+                                  <path fill="#0045F1"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                  </path>
+                                  <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.471" rx="2.122"></rect>
+                                </g>
+                                <g transform="translate(0 15) translate(50 13.97)">
+                                  <path fill="#0045F1"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                  </path>
+                                  <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.471" rx="2.122"></rect>
+                                </g>
+                                <g transform="translate(0 15) translate(0 13.97)">
+                                  <path fill="#0045F1"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                  </path>
+                                  <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.471" rx="2.122"></rect>
+                                </g>
+                                <g transform="translate(0 15) translate(25 25)">
+                                  <path fill="#0045F1"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944h45.36zm2.31.952c.04.31-.056.62-.263.855-.207.234-.504.368-.815.368H1.09c-.313 0-.61-.134-.818-.368-.206-.234-.302-.545-.264-.853l4.2-33.984-.285-7.787c-.01-.295.1-.583.304-.793C4.432.12 4.715 0 5.012 0h39.976c.297 0 .58.12.782.33.207.21.318.5.307.795l-.28 7.885 4.194 33.886z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M47.68 41.944l-4.05-32.8-.005-.075.237-6.897H6.14l.24 6.798-.003.076L2.32 41.944z">
+                                  </path>
+                                  <rect width="16.996" height="4.243" x="16.524" y="5.657" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.471" rx="2.122"></rect>
+                                </g>
+                              </g>
+                            </svg></div>
+                          <div class="label equivalent-bags" style="visibility: visible;">128 sacs</div>
+                        </div>
+                      </label>
+                      <label for="storage-space-10"
+                        class="storage-size">
+                        <input id="storage-space-10" type="radio" hidden="" ngModel name="espace" value="10">
+                        <div class="box">
+                          <div class="label size">+ de 10m²</div>
+                          <div class="picture icon" icon="stockage_5"><svg xmlns="http://www.w3.org/2000/svg"
+                              viewBox="0 0 100 100" id="stockage_5">
+                              <g fill="none">
+                                <g transform="translate(0 17) translate(8.933)">
+                                  <path fill="#0045F1"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756h38.272zm1.95.803c.032.262-.05.524-.224.723-.174.196-.425.31-.688.31H.918c-.262 0-.513-.114-.69-.312-.172-.196-.254-.458-.22-.718L3.547 7.52 3.31.95C3.3.7 3.394.458 3.566.28 3.74.1 3.978 0 4.228 0h33.728c.25 0 .49.1.66.278.175.18.268.422.26.672l-.237 6.652 3.537 28.59z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756z">
+                                  </path>
+                                  <rect width="14.339" height="3.58" x="13.941" y="4.773" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.489" rx="1.79"></rect>
+                                </g>
+                                <g transform="translate(0 17) translate(47.644)">
+                                  <path fill="#0045F1"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756h38.272zm1.95.803c.032.262-.05.524-.224.723-.174.196-.425.31-.688.31H.918c-.262 0-.513-.114-.69-.312-.172-.196-.254-.458-.22-.718L3.547 7.52 3.31.95C3.3.7 3.394.458 3.566.28 3.74.1 3.978 0 4.228 0h33.728c.25 0 .49.1.66.278.175.18.268.422.26.672l-.237 6.652 3.537 28.59z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756z">
+                                  </path>
+                                  <rect width="14.339" height="3.58" x="13.941" y="4.773" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.489" rx="1.79"></rect>
+                                </g>
+                                <g transform="translate(0 17) translate(0 16.378)">
+                                  <path fill="#0045F1"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756h38.272zm1.95.803c.032.262-.05.524-.224.723-.174.196-.425.31-.688.31H.918c-.262 0-.513-.114-.69-.312-.172-.196-.254-.458-.22-.718L3.547 7.52 3.31.95C3.3.7 3.394.458 3.566.28 3.74.1 3.978 0 4.228 0h33.728c.25 0 .49.1.66.278.175.18.268.422.26.672l-.237 6.652 3.537 28.59z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756z">
+                                  </path>
+                                  <rect width="14.339" height="3.58" x="13.941" y="4.773" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.489" rx="1.79"></rect>
+                                </g>
+                                <g transform="translate(0 17) translate(56.577 16.378)">
+                                  <path fill="#0045F1"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756h38.272zm1.95.803c.032.262-.05.524-.224.723-.174.196-.425.31-.688.31H.918c-.262 0-.513-.114-.69-.312-.172-.196-.254-.458-.22-.718L3.547 7.52 3.31.95C3.3.7 3.394.458 3.566.28 3.74.1 3.978 0 4.228 0h33.728c.25 0 .49.1.66.278.175.18.268.422.26.672l-.237 6.652 3.537 28.59z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756z">
+                                  </path>
+                                  <rect width="14.339" height="3.58" x="13.941" y="4.773" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.489" rx="1.79"></rect>
+                                </g>
+                                <g transform="translate(0 17) translate(28.289 26.055)">
+                                  <path fill="#0045F1"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756h38.272zm1.95.803c.032.262-.05.524-.224.723-.174.196-.425.31-.688.31H.918c-.262 0-.513-.114-.69-.312-.172-.196-.254-.458-.22-.718L3.547 7.52 3.31.95C3.3.7 3.394.458 3.566.28 3.74.1 3.978 0 4.228 0h33.728c.25 0 .49.1.66.278.175.18.268.422.26.672l-.237 6.652 3.537 28.59z">
+                                  </path>
+                                  <path fill="#dd2476"
+                                    d="M40.228 35.388l-3.42-27.674-.002-.063.2-5.816H5.18l.203 5.735-.003.062-3.424 27.756z">
+                                  </path>
+                                  <rect width="14.339" height="3.58" x="13.941" y="4.773" fill="#FFF" stroke="#0045F1"
+                                    stroke-width="1.489" rx="1.79"></rect>
+                                </g>
+                              </g>
+                            </svg></div>
+                          <div class="label equivalent-bags" style="visibility: visible;">160 sacs</div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="profile-contact">
+                <div class="profile-form">
+                  <h3>Disponibilités *</h3>
+
+                  <div class="input-wrapper input-wrapper-textarea">
+                    <label>En tant que Coach, vous vous engagez à récolter les sacs pleins de vos Trieurs. Quelles
+                      sont vos disponibilités pour qu'ils puissent vous les apporter ?</label>
+                    <textarea class="textAreaHobbies" name="availability" ngModel forward="" required=""
+                      placeholder="Je suis disponible du lundi au vendredi de 17h à 19h. Ainsi que les samedis de 8h à 12h."
+                      rows="10" cols="50">								</textarea>
+                    <div class="input-error">
+                      Ce champs est requis
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+
+
+              <div class="onboarding-profile-navigation-bottom">
+                <button style="margin-right:40px;" type="button" class="secondary"
+                  [routerLink]="[ '/profile']">précedent</button>
+
+                <button class="btn btn-primary" type="submit" [disabled]="!isValid(g)"
+                  (click)="submitCoachForm(g)">Terminer</button>
+
+              </div>
+
+            </form>
+
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<alert class="alert-modal error opened" *ngIf="errorMsg">
+  <span class="alert-modal-text">
+    {{errorMsg}}
+  </span>
+
+
+  <button class="btn" type="button" name="button" (click)="okAlert()">OK</button>
+</alert>
+
+
+<alert class="alert-modal success opened" *ngIf="successMsg">
+  <span class="alert-modal-text">
+    {{successMsg}}
+  </span>
+
+
+  <button class="btn" type="button" name="button" (click)="okAlert()">OK</button>
+</alert>

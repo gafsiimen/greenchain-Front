@@ -1,0 +1,706 @@
+html,
+body,
+div,
+span,
+h3,
+p,
+pre,
+a,
+ul,
+li,
+form,
+label,
+nav,
+section {
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 16px
+}
+
+nav,
+section {
+    display: block
+}
+
+ul {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+a:link {
+    color: #5f5f5f;
+    text-decoration: none
+}
+
+a:visited {
+    color: #5f5f5f;
+    text-decoration: none
+}
+
+a:hover {
+    color: #5f5f5f;
+    text-decoration: none
+}
+
+a:focus,
+a:active {
+    background: none;
+    text-decoration: none;
+    color: #5f5f5f
+}
+
+* {
+    font-family: Nunito, sans-serif
+}
+
+h3,
+.h3 {
+    font-size: calc(1rem*2.44141);
+    font-family: ubuntu
+}
+
+h3 {
+    color: #5f5f5f;
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 10px
+}
+
+.input-wrapper {
+    position: relative;
+    text-align: left
+}
+
+.input-wrapper .input-error {
+    min-height: 17px;
+    visibility: hidden;
+    position: absolute;
+    margin-top: 6px;
+    font-size: 14px
+}
+
+.input-wrapper input[type=text],
+.input-wrapper input[type=number] {
+    display: block;
+    border: 1px solid #e5e7ea;
+    border-radius: 25px;
+    height: 50px;
+    line-height: 50px;
+    color: #515151;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    padding: 0 25px;
+    width: calc(100% - 50px);
+    box-shadow: 0 0 6px -4px gray
+}
+
+.input-wrapper input[type=text]:focus,
+.input-wrapper input[type=number]:focus {
+    color: #5f5f5f
+}
+
+*:focus {
+    outline: none
+}
+
+::-moz-focus-inner {
+    border: 0
+}
+
+input[type=number] {
+    -moz-appearance: textfield
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    color: #a1aac1
+}
+
+::-webkit-input-placeholder {
+    color: #a1aac1
+}
+
+::-moz-placeholder {
+    color: #a1aac1
+}
+
+:-ms-input-placeholder {
+    color: #a1aac1
+}
+
+:-moz-placeholder {
+    color: #a1aac1
+}
+
+:disabled input::-webkit-outer-spin-button,
+:disabled input::-webkit-inner-spin-button {
+    color: #a1aac1
+}
+
+:disabled ::-webkit-input-placeholder {
+    color: #a1aac1
+}
+
+:disabled ::-moz-placeholder {
+    color: #a1aac1
+}
+
+:disabled :-ms-input-placeholder {
+    color: #a1aac1
+}
+
+:disabled :-moz-placeholder {
+    color: #a1aac1
+}
+
+.input-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.input-row>* {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin-top: 0
+}
+
+form {
+    background-color: #f5f8fe
+}
+
+form:not([noangular]) input:not([name]) {
+    background: -webkit-radial-gradient(circle, #3f5efb 0, #fc466b 100%);
+    background: radial-gradient(circle, #3f5efb 0, #fc466b 100%)
+}
+
+.input-wrapper label {
+    display: block;
+    padding: 0 0 8px 25px;
+    color: #5e5e5f
+}
+
+.btn:not([ta-button]) {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    height: 50px;
+    padding: 0 40px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    box-sizing: border-box;
+    border-radius: 38px;
+    border: none;
+    background-color: #dd2476;
+    outline: none;
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    line-height: 50px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    box-shadow: 0 0 10px 2px rgba(38, 38, 38, .11);
+    text-transform: uppercase;
+    font-size: 14px
+}
+
+.btn:not([ta-button]):before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin: -15px 0 0 1px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #0045f1;
+    -webkit-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transform: scale3d(1, 2, 1);
+    transform: scale3d(1, 2, 1);
+    -webkit-transition: -webkit-transform .3s, opacity .3s;
+    -webkit-transition: opacity .3s, -webkit-transform .3s;
+    transition: opacity .3s, -webkit-transform .3s;
+    transition: transform .3s, opacity .3s;
+    transition: transform .3s, opacity .3s, -webkit-transform .3s;
+    -webkit-transition-timing-function: cubic-bezier(.7, 0, .9, 1);
+    transition-timing-function: cubic-bezier(.7, 0, .9, 1)
+}
+
+.btn:not([ta-button]):hover {
+    background: #0045f1
+}
+
+.btn:not([ta-button]):hover:before {
+    -webkit-transform: scale3d(11, 11, 1);
+    transform: scale3d(11, 11, 1)
+}
+
+.btn:not([ta-button]):not(:disabled):hover {
+    background-color: #0045f1
+}
+
+.btn:not([ta-button]):disabled {
+    background-color: #fdeae2;
+    color: #ffe0d4;
+    pointer-events: none
+}
+
+.alert-modal .btn {
+    padding: 4px 30px;
+    border-color: currentColor;
+    background-color: transparent
+}
+
+.alert-modal .btn:not(:disabled):hover {
+    color: #fff
+}
+
+.alert-modal.success .btn:not(:disabled):hover {
+    background-color: #5cb85c
+}
+
+.alert-modal.warning .btn.btn:not(:disabled):hover {
+    background-color: #f0ac4d
+}
+
+.alert-modal.error .btn.btn:not(:disabled):hover {
+    background-color: #d9534f
+}
+
+.alert-modal.info .btn:not(:disabled):hover {
+    background-color: #0045f1
+}
+
+.tertiary {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    height: 40px;
+    padding: 8px 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    color: #a1aac1;
+    box-sizing: border-box;
+    border-radius: 38px;
+    border: none;
+    background-color: #fff;
+    outline: none;
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: .5px;
+    box-shadow: 0 0 10px 2px rgba(38, 38, 38, .11);
+    text-transform: uppercase
+}
+
+.tertiary:hover {
+    color: #5f5f5f
+}
+
+.tertiary span {
+    font-size: 11px
+}
+
+tbody .tr:not(:focus-within) input:not([type=checkbox]),
+tbody tr:not(:focus-within) input:not([type=checkbox]),
+.tbody .tr:not(:focus-within) input:not([type=checkbox]),
+.tbody tr:not(:focus-within) input:not([type=checkbox]) {
+    border-color: transparent;
+    background-color: transparent
+}
+
+@supports(-moz-transform:translate(0)) {}
+
+.alert-modal {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    -webkit-transform: translate(-50%, 100%);
+    -ms-transform: translate(-50%, 100%);
+    transform: translate(-50%, 100%);
+    -webkit-transition: .5s cubic-bezier(.25, .46, .45, .94);
+    transition: .5s cubic-bezier(.25, .46, .45, .94);
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px 0 rgba(144, 131, 130, .2);
+    z-index: 2
+}
+
+.alert-modal button {
+    color: currentColor;
+    margin-left: auto
+}
+
+.alert-modal .error-details {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #d9534f
+}
+
+.alert-modal .show-more-details {
+    display: none
+}
+
+.alert-modal-text {
+    line-height: 1.5em
+}
+
+html {
+    height: 100%;
+    font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: system-ui
+}
+
+body {
+    min-height: 100%;
+    height: 1px;
+    overflow-x: hidden
+}
+
+main {
+    min-height: 100%;
+    display: block;
+    background-color: #f5f8fe
+}
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px
+}
+
+@media all and (max-width:400px) {
+    .content {
+        padding: 15px
+    }
+}
+
+.section {
+    position: relative;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+@media all and (orientation:portrait) and (max-width:620px) {
+    .section {
+        border-left-width: 0;
+        border-right-width: 0
+    }
+}
+
+.personal-space {
+    width: 100%;
+    min-height: 100vh;
+    color: #5f5f5f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 5px
+}
+
+.personal-space.profile {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 5px 5px 75px
+}
+
+.personal-space .profile-nav {
+    width: 20%
+}
+
+.personal-space .profile-nav .profile-nav-tabs {
+    top: 100px;
+    position: -webkit-sticky;
+    position: sticky;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.personal-space .profile-nav .profile-nav-tabs .profile-one-tab {
+    width: 150px;
+    line-height: 35px
+}
+
+.personal-space .profile-nav .profile-nav-tabs .profile-one-tab .profile-one-tab-link:hover {
+    font-weight: 700;
+    color: #5f5f5f;
+    cursor: pointer
+}
+
+.personal-space #scrollAreaProfile {
+    overflow: visible;
+    background-color: #f5f8fe
+}
+
+.personal-space .profile-tab {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #f5f8fe
+}
+
+.personal-space .profile-tab .star {
+    font-style: italic;
+    font-size: 12px;
+    color: #515151;
+    margin-bottom: 15px
+}
+
+.personal-space .profile-tab .profile-identity {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 2em;
+    margin-bottom: 1em;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 3.49px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details .profile-photo {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-width: 100px
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details .profile-photo span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(112, 119, 135, .7);
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    font-size: 13px
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details .profile-photo span:hover {
+    background: #dd2476;
+    opacity: .7;
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details .profile-information {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 2em
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details .profile-information .profile-name {
+    font-weight: 700;
+    color: #5f5f5f
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details .profile-information .profile-name span {
+    font-size: 1.5em;
+    text-transform: capitalize
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details .profile-information p {
+    color: #5f5f5f
+}
+
+.personal-space .profile-tab .profile-identity .profile-identity-details .profile-information .profile-data {
+    text-transform: capitalize
+}
+
+.personal-space .profile-tab .profile-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    padding: 2em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    color: #5f5f5f;
+    background-color: #fff;
+    border-radius: 3.49px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.personal-space .profile-tab .profile-contact .profile-form h3 {
+    color: #5f5f5f;
+    font-size: 1.2em;
+    margin-bottom: 1em
+}
+
+.personal-space .profile-tab .profile-contact .profile-form .input-wrapper {
+    margin-bottom: 30px;
+    max-width: 400px
+}
+
+.personal-space .profile-tab .profile-contact .profile-form .input-wrapper .input-error {
+    width: 200%
+}
+
+.personal-space .profile-tab .profile-contact .profile-form.role button {
+    margin-left: 25px
+}
+
+.personal-space .profile-tab .profile-contact .profile-form .inputSponsor {
+    width: 50%;
+    height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1em 1em 0 0
+}
+
+.personal-space .validate {
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    display: block;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .11);
+    text-align: center;
+    padding: 15px 0
+}
+
+.personal-space {
+    width: 100%;
+    min-height: 100vh;
+    color: #5f5f5f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 5px;
+    padding-bottom: 1em
+}
+
+.main-content {
+    padding-top: 70px;
+    background-color: #f5f8fe;
+}
