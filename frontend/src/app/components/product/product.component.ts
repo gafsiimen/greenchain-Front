@@ -52,7 +52,9 @@ export class ProductComponent implements OnInit {
           this.myProduct = this.Products.find(element => element.id == this.param_id);
           console.log(this.myProduct);
           this.bottles = Math.round(this.myProduct.price * 50 / 125);
-          this.authed = this._signService.isLoggedIn();
+          this._signService.isLoggedIn().subscribe((value) => 
+          { if(value==true) this.authed =true;
+            else this.authed=false;});
           this.storageCartItemsNumber = this._userService.storageCartItemsNumber();
           this.currentQuantity = 1;
           this.currentPrice = this.myProduct.price;
@@ -69,14 +71,6 @@ export class ProductComponent implements OnInit {
       
   }
 
-  authBehavior(){
-
-    if (this._signService.isLoggedIn() ) 
-      this._route.navigate(["/trieur-dashboard"]);
-      else 
-      this._route.navigate(["trieur-dashboard"]);    
-
-  }
 
   quantityIncrement() {
 

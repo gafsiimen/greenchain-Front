@@ -50,7 +50,10 @@ constructor(
           else
           this.CurrentCategoryCount = 0;
 
-          this.authed=this._signService.isLoggedIn();
+          this._signService.isLoggedIn().subscribe((value) => 
+          { if(value==true) this.authed =true;
+            else this.authed=false;});
+         
           this.storageCartItemsNumber=this._userService.storageCartItemsNumber();
   
         
