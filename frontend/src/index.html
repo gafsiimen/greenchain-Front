@@ -1,31 +1,36 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 
   <meta charset="utf-8">
   <title>Frontend</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+
+
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+
+
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
     integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- <script src="./main.js">  </script>  -->
-  </head>
+  <!-- <script src="./main.js">  </script>  -->
+</head>
+
 <body>
   <app-root></app-root>
-  
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
@@ -33,68 +38,69 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-  <script>let nCount = selector => {
-    $(selector).each(function() {
+  <script>
+    let nCount = selector => {
+      $(selector).each(function () {
         $(this)
-            .animate({
-                Counter: $(this).text()
-            }, {
-                // A string or number determining how long the animation will run.
-                duration: 4000,
-                // A string indicating which easing function to use for the transition.
-                easing: "swing",
-                /**
-                 * A function to be called for each animated property of each animated element. 
-                 * This function provides an opportunity to
-                 *  modify the Tween object to change the value of the property before it is set.
-                 */
-                step: function(value) {
-                    $(this).text(Math.ceil(value));
-                }
-            });
-    });
-  };
-  
-  let a = 0;
-  $(window).scroll(function() {
-    // The .offset() method allows us to retrieve the current position of an element  relative to the document
-    let oTop = $(".numbers").offset().top - window.innerHeight;
+          .animate({
+            Counter: $(this).text()
+          }, {
+            // A string or number determining how long the animation will run.
+            duration: 4000,
+            // A string indicating which easing function to use for the transition.
+            easing: "swing",
+            /**
+             * A function to be called for each animated property of each animated element. 
+             * This function provides an opportunity to
+             *  modify the Tween object to change the value of the property before it is set.
+             */
+            step: function (value) {
+              $(this).text(Math.ceil(value));
+            }
+          });
+      });
+    };
 
-    if (a == 0 && $(window).scrollTop() >= oTop) {
+    let a = 0;
+    $(window).scroll(function () {
+      // The .offset() method allows us to retrieve the current position of an element  relative to the document
+      let oTop = $(".numbers").offset().top - window.innerHeight;
+
+      if (a == 0 && $(window).scrollTop() >= oTop) {
         a++;
         nCount(".rect > h1");
-    }
-  });
-  
-  
-  
-  /**
-  *
-  *  sticky navigation
-  *
-  */
-  
-  /*   let navbar = $(".navbar");
-  
-  $(window).scroll(function() {
-    // get the complete hight of window
-    let oNav = $(".nav-enter-here").offset().top;
-    console.log(oNav+'++++');
-    let oNav1 = $(window).scrollTop() ;
-    console.log(oNav1+'Nav1');
-    console.log(navbar.hasClass("sticky"));
-  
-    if ($(window).scrollTop() > oNav) {
-      navbar.addClass("sticky");
-        console.log(navbar.hasClass("sticky"));
-  
-    } else {
-        navbar.removeClass("sticky");
-        
-    }
-  });*/
-  
-  
-  </script> 
+      }
+    });
+
+
+
+    /**
+     *
+     *  sticky navigation
+     *
+     */
+
+    /*   let navbar = $(".navbar");
+    
+    $(window).scroll(function() {
+      // get the complete hight of window
+      let oNav = $(".nav-enter-here").offset().top;
+      console.log(oNav+'++++');
+      let oNav1 = $(window).scrollTop() ;
+      console.log(oNav1+'Nav1');
+      console.log(navbar.hasClass("sticky"));
+    
+      if ($(window).scrollTop() > oNav) {
+        navbar.addClass("sticky");
+          console.log(navbar.hasClass("sticky"));
+    
+      } else {
+          navbar.removeClass("sticky");
+          
+      }
+    });*/
+
+  </script>
 </body>
+
 </html>
