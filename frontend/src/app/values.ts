@@ -1,5 +1,5 @@
 export const CURRENT_USER_TOKEN = 'user_token';
-export const apiUrl = 'http://localhost:8000/api/';
+export const apiUrl = 'http://greenchain.insodev.fr/api/';
 export const   Products = [
     {
       id: 1,

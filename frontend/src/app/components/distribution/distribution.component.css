@@ -702,6 +702,7 @@ header {
 .main-content {
     padding-top: 70px;
     background-color: #f5f8fe;
+    height: 100vh;
 }
 
 .header-top {

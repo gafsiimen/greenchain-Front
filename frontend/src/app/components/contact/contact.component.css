@@ -339,5 +339,5 @@ body {
 .main-content {
     padding-top: 70px;
     background-color: #f5f8fe;
-    height: -webkit-fill-available;
+    height: 100vh;
 }

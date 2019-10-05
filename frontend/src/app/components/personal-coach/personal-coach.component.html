@@ -1,210 +1,225 @@
 <div class="main-content ">
-    <div class="deny-layer"></div>
-    <div class="content ">
-        <section class="section default ">
-            <div ui-view="" *ngIf="myCoach && !canChange" class="onboarding-content ">
+  <div class="deny-layer"></div>
+  <div class="content ">
+    <section class="section default ">
+      <div ui-view="" *ngIf="myCoach && !canChange" class="onboarding-content ">
 
 
-                <main class="personal-space ">
+        <main class="personal-space ">
 
-                    <div class="coach-tab ">
+          <div class="coach-tab ">
 
-                        <div class="card ">
-                            <div class="card-infos">
-                                <div class="modify-buttons">
-                                    <button type="button" class="change" (click)="changeCoach()">Changer de Coach</button>
-                                </div>
-                                <div class="personnal-infos">
-                                    <img *ngIf="myCoach?.avatar" class="photo " src={{URL+myCoach?.avatar}}>
-                                    <img *ngIf="!myCoach?.avatar" class="photo " src={{noAvatarPicUrl}}>
-                                    <div class="infos-txt">
-                                        <h2 class="">{{myCoach?.firstname}} {{myCoach?.lastname}}</h2>
-                                        <p class="">{{myCoach?.email}}</p>
-                                        <p class="">{{myCoach?.tel}}</p>
-                                        <p class="">{{myCoach?.addresses.primary_address}} {{myCoach?.addresses.zip}} {{myCoach?.addresses.city}}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="box-separator">
-                                </div>
+            <div class="card ">
+              <a style="margin-bottom:10px;margin-top: 23px;margin-bottom:-23px" [routerLink]="['/trieur-dashboard']">
+                < Retour au Dashboard</a> <div class="card-infos">
+
+                  <div class="modify-buttons">
+                    <button type="button" class="change" (click)="changeCoach()">Changer de Coach</button>
+                  </div>
 
 
 
-                                <div class="recycling-infos">
-                                    <div class="types-part">
-
-                                        <div class="type-infos ">
-                                            <div class="bag-type  " title="PET">
-                                                <label for=""><span class="input-label"><span class="picture">
-                              <img class="" src="/assets/img/bottle.svg">
-                            </span><span class="label ">PET</span></span></label></div>
-
-                                        </div>
-
-                                    </div>
-                                    <div class="stats sorters">
-                                        <p class="">{{myCoach?.trieurs_nb}} Trieurs</p>
-                                        <div class=" icon"><svg viewBox="0 0 42 26" xmlns="http://www.w3.org/2000/svg" id="trieur">
-
-                        <path
-                          d="M7.343 7.78c0 2.807 2.377 5.09 5.3 5.09 2.92 0 5.298-2.283 5.298-5.09s-2.377-5.09-5.298-5.09c-2.922 0-5.3 2.283-5.3 5.09zm9.403 6.014c4.49 1.605 7.697 5.763 7.697 10.628 0 .207-.006.413-.017.617l-2.19-.113c.01-.167.015-.335.015-.505 0-5.09-4.31-9.23-9.608-9.23-5.3 0-9.61 4.14-9.61 9.23 0 .17.005.336.015.503l-2.19.112c-.01-.204-.017-.408-.017-.615 0-4.865 3.208-9.023 7.698-10.628C6.5 12.506 5.15 10.294 5.15 7.78c0-3.968 3.36-7.197 7.492-7.197 4.13 0 7.49 3.23 7.49 7.197 0 2.513-1.35 4.726-3.386 6.014zm11.87-11.96c-.704 0-1.4.514-1.963 1.448l-2.52 3.603c-.14.202-.357.34-.608.388-.25.047-.504-.002-.716-.14-.212-.135-.355-.343-.405-.583-.05-.24.003-.485.145-.688l2.475-3.536C25.935.826 27.21 0 28.615 0c1.412 0 2.695.84 3.616 2.362L35.89 8.48l.313-1.506c.05-.24.196-.45.41-.586.213-.135.468-.183.718-.132.51.098.847.582.744 1.076l-.812 3.9c-.004.02-.01.04-.016.06-.013.043-.03.08-.04.1-.015.036-.044.105-.096.178-.017.024-.064.077-.085.098-.037.04-.084.082-.134.117-.03.025-.064.047-.093.063-.03.017-.066.03-.102.043-.102.047-.237.078-.37.078-.054 0-.11-.005-.168-.014l-4.078-.783c-.516-.1-.85-.583-.748-1.077.05-.24.193-.45.407-.587.212-.135.468-.182.718-.132l1.992.383-3.873-6.478c-.56-.933-1.258-1.447-1.96-1.447zm12.65 15.5c.898 1.516.976 3.112.212 4.385-.74 1.23-2.175 1.937-3.933 1.94l-7.02.012.795.764c.18.173.28.403.28.648s-.1.475-.28.648c-.183.174-.422.268-.675.268-.254 0-.493-.095-.673-.266l-2.367-2.275c-.223-.177-.35-.43-.35-.7l.002-.038c.005-.233.103-.455.278-.624l2.436-2.34c.373-.357.978-.356 1.35 0 .18.174.28.404.28.648 0 .246-.1.476-.28.65l-.818.784 7.04-.01c1.062-.003 1.895-.377 2.284-1.027.42-.697.33-1.65-.248-2.615-.01-.016-.018-.032-.026-.05l-1.663-3.595c-.214-.463.004-1.005.484-1.21.228-.1.488-.106.726-.02.24.088.43.26.533.486l1.632 3.535z">
-                        </path>
-                      </svg></div>
-                                    </div>
-                                    <div class="stats bags">
-                                        <p class="">{{myCoach?.collected_sacs_nb}} Sacs collectés</p>
-                                        <div class=" icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 20" id="bag">
-                        <path fill="#0045F1" fill-rule="evenodd"
-                          d="M17.938 5h-3.684v-.833C14.254 1.87 12.137 0 9.534 0c-2.602 0-4.72 1.87-4.72 4.167v4.166h1.89V6.667h3.774V5H6.703v-.833c0-1.38 1.27-2.5 2.83-2.5 1.563 0 2.833 1.12 2.833 2.5v4.166h1.888V6.667h1.91l.826 11.666H2.01l.826-11.666h.09V5H1.063L0 20h19L17.938 5z">
-                        </path>
-                      </svg></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-more " *ngIf="true">
-                                <p class="presentation-quotes ">
-                                    <span class="quotes">“</span> {{myCoach?.comment}}
-                                    <span class="quotes">”</span>
-                                </p>
-
-
-                                <div class="presentation-features">
-                                    <div class="feature availability">
-                                        <h3>Disponibilités</h3>
-                                        <p class="infos-txt &#39;">{{myCoach?.availability}}</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-                        </div>
+                  <div class="personnal-infos">
+                    <img *ngIf="myCoach?.avatar" class="photo " src={{URL+myCoach?.avatar}}>
+                    <img *ngIf="!myCoach?.avatar" class="photo " src={{noAvatarPicUrl}}>
+                    <div class="infos-txt">
+                      <h2 class="">{{myCoach?.firstname}} {{myCoach?.lastname}}</h2>
+                      <p class="">{{myCoach?.email}}</p>
+                      <p class="">{{myCoach?.tel}}</p>
+                      <p class="">{{myCoach?.addresses.primary_address}} {{myCoach?.addresses.zip}}
+                        {{myCoach?.addresses.city}}
+                      </p>
                     </div>
+                  </div>
+                  <div class="box-separator">
+                  </div>
 
-                </main>
-            </div>
-            <agm-map *ngIf="!myCoach || canChange==true" [mapTypeId]="'roadmap'" [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="mapClick($event)">
-                <agm-marker *ngFor="let coach of coachsList" [iconUrl]="iconUrl" [latitude]="coach.latitude" [longitude]="coach.longitude" (markerClick)="clickedMarker(coach)"></agm-marker>
-            </agm-map>
-            <div *ngIf="showSelected" class="map state-coaches">
-                <aside class="sidebar active">
-                    <div class="coaches">
-                        <div class="bubble opened">
-                            <div class="top">
-                                <span class="close-icon small  icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98 98"
-                    id="close">
-                    <path
-                      d="M50 61.337l35.804 35.426c3.157 3.124 8.116 2.955 11.076-.377 2.96-3.333 2.8-8.567-.357-11.69L61.458 50l35.065-34.695c3.158-3.124 3.318-8.358.357-11.69C93.92.28 88.96.112 85.804 3.236L50 38.663 14.196 3.237C11.04.113 6.08.282 3.12 3.614c-2.96 3.333-2.8 8.567.357 11.69L38.542 50 3.477 84.695C.32 87.82.16 93.053 3.12 96.385c2.96 3.333 7.92 3.502 11.076.378L50 61.337z">
-                    </path>
-                    <use fill="#FFF" fill-rule="nonzero" xlink:href="#close-a" transform="translate(-1 -1)">
-                    </use>
-                  </svg></span>
-                                <span class="close-icon large  icon" (click)="closeSelected()"><svg
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98 98"
-                    id="close">
-                    <path
-                      d="M50 61.337l35.804 35.426c3.157 3.124 8.116 2.955 11.076-.377 2.96-3.333 2.8-8.567-.357-11.69L61.458 50l35.065-34.695c3.158-3.124 3.318-8.358.357-11.69C93.92.28 88.96.112 85.804 3.236L50 38.663 14.196 3.237C11.04.113 6.08.282 3.12 3.614c-2.96 3.333-2.8 8.567.357 11.69L38.542 50 3.477 84.695C.32 87.82.16 93.053 3.12 96.385c2.96 3.333 7.92 3.502 11.076.378L50 61.337z">
-                    </path>
-                    <use fill="#FFF" fill-rule="nonzero" xlink:href="#close-a" transform="translate(-1 -1)">
-                    </use>
-                  </svg></span>
 
-                                <div class="picture" *ngIf="selectedCoach?.avatar">
-                                    <img class="" src="{{URL}}{{selectedCoach.avatar}}">
 
-                                </div>
+                  <div class="recycling-infos">
+                    <div class="types-part">
 
-                                <div class="picture" *ngIf="!selectedCoach?.avatar">
-                                    <img class="" src="{{noAvatarPicUrl}}">
-                                </div>
-                                <h3 class="">{{selectedCoach?.firstname}} {{selectedCoach?.lastname}}</h3>
-                                <div class="address ">{{selectedCoach?.addresses.primary_address}}, {{selectedCoach?.addresses.zip}} {{selectedCoach?.addresses.additional_address}}</div>
-                                <div class="stats">
-                                    <span class="stat-sorters"><span class="count ">{{selectedCoach?.trieurs_nb}}</span> Trieurs
-                                    </span>
-                                    <span class="stat-bags"><span class="count ">{{selectedCoach?.collected_sacs_nb}}</span> Sacs collectés
-                                    </span>
-                                </div>
-                            </div>
+                      <div class="type-infos ">
+                        <div class="bag-type  " title="PET">
+                          <label for=""><span class="input-label"><span class="picture">
+                                <img class="" src="/assets/img/bottle.svg">
+                              </span><span class="label ">PET</span></span></label></div>
 
-                            <div class="stats-material ">
-
-                                <div class="bag-type-metrics ">
-                                    <span class="name ">Plastique PET</span>
-                                </div>
-                            </div>
-                            <div class="schedule">
-                                <h3>Horaires du Coach</h3>
-                                <div class="details ">{{selectedCoach?.availability}}</div>
-                            </div>
-                            <div class="actions">
-                                <button class="btn change-coach" [disabled]="myCoach.id==selectedCoach?.id" (click)="changeConfirmation(selectedCoach?.id)">Choisir ce coach</button>
-                            </div>
-                        </div>
-
+                      </div>
 
                     </div>
-                </aside>
+                    <div class="stats sorters">
+                      <p class="">{{myCoach?.trieurs_nb}} Trieurs</p>
+                      <div class=" icon"><svg viewBox="0 0 42 26" xmlns="http://www.w3.org/2000/svg" id="trieur">
+
+                          <path
+                            d="M7.343 7.78c0 2.807 2.377 5.09 5.3 5.09 2.92 0 5.298-2.283 5.298-5.09s-2.377-5.09-5.298-5.09c-2.922 0-5.3 2.283-5.3 5.09zm9.403 6.014c4.49 1.605 7.697 5.763 7.697 10.628 0 .207-.006.413-.017.617l-2.19-.113c.01-.167.015-.335.015-.505 0-5.09-4.31-9.23-9.608-9.23-5.3 0-9.61 4.14-9.61 9.23 0 .17.005.336.015.503l-2.19.112c-.01-.204-.017-.408-.017-.615 0-4.865 3.208-9.023 7.698-10.628C6.5 12.506 5.15 10.294 5.15 7.78c0-3.968 3.36-7.197 7.492-7.197 4.13 0 7.49 3.23 7.49 7.197 0 2.513-1.35 4.726-3.386 6.014zm11.87-11.96c-.704 0-1.4.514-1.963 1.448l-2.52 3.603c-.14.202-.357.34-.608.388-.25.047-.504-.002-.716-.14-.212-.135-.355-.343-.405-.583-.05-.24.003-.485.145-.688l2.475-3.536C25.935.826 27.21 0 28.615 0c1.412 0 2.695.84 3.616 2.362L35.89 8.48l.313-1.506c.05-.24.196-.45.41-.586.213-.135.468-.183.718-.132.51.098.847.582.744 1.076l-.812 3.9c-.004.02-.01.04-.016.06-.013.043-.03.08-.04.1-.015.036-.044.105-.096.178-.017.024-.064.077-.085.098-.037.04-.084.082-.134.117-.03.025-.064.047-.093.063-.03.017-.066.03-.102.043-.102.047-.237.078-.37.078-.054 0-.11-.005-.168-.014l-4.078-.783c-.516-.1-.85-.583-.748-1.077.05-.24.193-.45.407-.587.212-.135.468-.182.718-.132l1.992.383-3.873-6.478c-.56-.933-1.258-1.447-1.96-1.447zm12.65 15.5c.898 1.516.976 3.112.212 4.385-.74 1.23-2.175 1.937-3.933 1.94l-7.02.012.795.764c.18.173.28.403.28.648s-.1.475-.28.648c-.183.174-.422.268-.675.268-.254 0-.493-.095-.673-.266l-2.367-2.275c-.223-.177-.35-.43-.35-.7l.002-.038c.005-.233.103-.455.278-.624l2.436-2.34c.373-.357.978-.356 1.35 0 .18.174.28.404.28.648 0 .246-.1.476-.28.65l-.818.784 7.04-.01c1.062-.003 1.895-.377 2.284-1.027.42-.697.33-1.65-.248-2.615-.01-.016-.018-.032-.026-.05l-1.663-3.595c-.214-.463.004-1.005.484-1.21.228-.1.488-.106.726-.02.24.088.43.26.533.486l1.632 3.535z">
+                          </path>
+                        </svg></div>
+                    </div>
+                    <div class="stats bags">
+                      <p class="">{{myCoach?.collected_sacs_nb}} Sacs collectés</p>
+                      <div class=" icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 20" id="bag">
+                          <path fill="#0045F1" fill-rule="evenodd"
+                            d="M17.938 5h-3.684v-.833C14.254 1.87 12.137 0 9.534 0c-2.602 0-4.72 1.87-4.72 4.167v4.166h1.89V6.667h3.774V5H6.703v-.833c0-1.38 1.27-2.5 2.83-2.5 1.563 0 2.833 1.12 2.833 2.5v4.166h1.888V6.667h1.91l.826 11.666H2.01l.826-11.666h.09V5H1.063L0 20h19L17.938 5z">
+                          </path>
+                        </svg></div>
+                    </div>
+                  </div>
             </div>
-        </section>
-    </div>
+            <div class="card-more " *ngIf="true">
+              <p class="presentation-quotes ">
+                <span class="quotes">“</span> {{myCoach?.comment}}
+                <span class="quotes">”</span>
+              </p>
+
+              <div class="container-fluid" style="background-color: #f5f8fe;">
+                  <div class="row-fluid d-flex align-items-center">
+                     
+              
+                <div class="presentation-features">
+                  <div class="feature availability">
+                    <h3>Disponibilités</h3>
+                    <p class="infos-txt &#39;">{{myCoach?.availability}}</p>
+                  </div>
+                </div>
+              </div>
+        
+            </div>
+
+
+            </div>
+
+
+          </div>
+      </div>
+
+      </main>
+  </div>
+  <agm-map *ngIf="!myCoach || canChange==true" [mapTypeId]="'roadmap'" [latitude]="lat" [longitude]="lng" [zoom]="zoom"
+    (mapClick)="mapClick($event)">
+    <agm-marker *ngFor="let coach of coachsList" [iconUrl]="iconUrl" [latitude]="coach.latitude"
+      [longitude]="coach.longitude" (markerClick)="clickedMarker(coach)"></agm-marker>
+  </agm-map>
+  <div *ngIf="showSelected" class="map state-coaches">
+    <aside class="sidebar active">
+      <div class="coaches">
+        <div class="bubble opened">
+          <div class="top">
+            <span class="close-icon small  icon">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98 98"
+                id="close">
+                <path
+                  d="M50 61.337l35.804 35.426c3.157 3.124 8.116 2.955 11.076-.377 2.96-3.333 2.8-8.567-.357-11.69L61.458 50l35.065-34.695c3.158-3.124 3.318-8.358.357-11.69C93.92.28 88.96.112 85.804 3.236L50 38.663 14.196 3.237C11.04.113 6.08.282 3.12 3.614c-2.96 3.333-2.8 8.567.357 11.69L38.542 50 3.477 84.695C.32 87.82.16 93.053 3.12 96.385c2.96 3.333 7.92 3.502 11.076.378L50 61.337z">
+                </path>
+                <use fill="#FFF" fill-rule="nonzero" xlink:href="#close-a" transform="translate(-1 -1)">
+                </use>
+              </svg></span>
+            <span class="close-icon large  icon" (click)="closeSelected()"><svg xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 98 98" id="close">
+                <path
+                  d="M50 61.337l35.804 35.426c3.157 3.124 8.116 2.955 11.076-.377 2.96-3.333 2.8-8.567-.357-11.69L61.458 50l35.065-34.695c3.158-3.124 3.318-8.358.357-11.69C93.92.28 88.96.112 85.804 3.236L50 38.663 14.196 3.237C11.04.113 6.08.282 3.12 3.614c-2.96 3.333-2.8 8.567.357 11.69L38.542 50 3.477 84.695C.32 87.82.16 93.053 3.12 96.385c2.96 3.333 7.92 3.502 11.076.378L50 61.337z">
+                </path>
+                <use fill="#FFF" fill-rule="nonzero" xlink:href="#close-a" transform="translate(-1 -1)">
+                </use>
+              </svg></span>
+
+            <div class="picture" *ngIf="selectedCoach?.avatar">
+              <img class="" src="{{URL}}{{selectedCoach.avatar}}">
+
+            </div>
+
+            <div class="picture" *ngIf="!selectedCoach?.avatar">
+              <img class="" src="{{noAvatarPicUrl}}">
+            </div>
+            <h3 class="">{{selectedCoach?.firstname}} {{selectedCoach?.lastname}}</h3>
+            <div class="address ">{{selectedCoach?.addresses.primary_address}}, {{selectedCoach?.addresses.zip}}
+              {{selectedCoach?.addresses.additional_address}}</div>
+            <div class="stats">
+              <span class="stat-sorters"><span class="count ">{{selectedCoach?.trieurs_nb}}</span> Trieurs
+              </span>
+              <span class="stat-bags"><span class="count ">{{selectedCoach?.collected_sacs_nb}}</span> Sacs collectés
+              </span>
+            </div>
+          </div>
+
+          <div class="stats-material ">
+
+            <div class="bag-type-metrics ">
+              <span class="name ">Plastique PET</span>
+            </div>
+          </div>
+          <div class="schedule">
+            <h3>Horaires du Coach</h3>
+            <div class="details ">{{selectedCoach?.availability}}</div>
+          </div>
+          <div class="actions">
+            <button class="btn change-coach" [disabled]="myCoach.id==selectedCoach?.id"
+              (click)="changeConfirmation(selectedCoach?.id)">Choisir ce coach</button>
+          </div>
+        </div>
+
+
+      </div>
+    </aside>
+  </div>
+  </section>
+</div>
 </div>
 
 
 
 
 <alert class="alert-modal error opened" *ngIf="wannaChange && !canChange">
-    <span class="alert-modal-text ">
-      
-      Désolé , mais il faut attendre le retour sur la
-  demande pour devenir Coach !
-    </span>
+  <span class="alert-modal-text ">
 
-    <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
+    Désolé , mais il faut attendre le retour sur la
+    demande pour devenir Coach !
+  </span>
+
+  <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
 </alert>
 
 <alert class="alert-modal success opened" *ngIf="chosenSuccessfully==true && !myCoach">
-    <span class="alert-modal-text ">
-      Félicitation , Vous Êtes maintenant associé(e) à un Coach ! Allez lui contacté pour trier votre premier Sac ;)
-    </span>
+  <span class="alert-modal-text ">
+    Félicitation , Vous Êtes maintenant associé(e) à un Coach ! Allez lui contacté pour trier votre premier Sac ;)
+  </span>
 
-    <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
+  <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
 </alert>
 
 
 
 <alert class="alert-modal warning opened" *ngIf="confirmationWarning">
-    <span class="alert-modal-text ">
-      Voulez vous vraiment changez votre Coach ?!
-      Merci de spécifier le motif :
-      <div class="input-wrapper inputProfile">
-       <form #f="ngForm">
-        <input type="text" name="reason" ngModel required
-          class="    "></form>
-        
-      </div> 
-    </span>
+  <span class="alert-modal-text ">
+    Voulez vous vraiment changez votre Coach ?!
+    Merci de spécifier le motif :
+    <div class="input-wrapper inputProfile">
+      <form #f="ngForm">
+        <input type="text" name="reason" ngModel required class="    "></form>
+
+    </div>
+  </span>
 
 
-    <button class="btn" type="button" style="line-height:0px;" name="button" (click)="closeAlert()">Non</button>
-    <button class="btn" type="button" style="line-height:0px;" name="button" [disabled]="!isValid(f)" (click)="chooseCoach()">Oui</button>
+  <button class="btn" type="button" style="line-height:0px;" name="button" (click)="closeAlert()">Non</button>
+  <button class="btn" type="button" style="line-height:0px;" name="button" [disabled]="!isValid(f)"
+    (click)="chooseCoach()">Oui</button>
 </alert>
 
 <alert class="alert-modal error opened" *ngIf="errorMsg">
-    <span class="alert-modal-text ">
-        
-        {{errorMsg}}
-      </span>
+  <span class="alert-modal-text ">
 
-    <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
+    {{errorMsg}}
+  </span>
+
+  <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
 </alert>
 
 <alert class="alert-modal success opened" *ngIf="changedSuccessfully==true && myCoach">
-    <span class="alert-modal-text ">
-          Félicitation , Vous avez changé votre Coach avec succès ;)
-        </span>
+  <span class="alert-modal-text ">
+    Félicitation , Vous avez changé votre Coach avec succès ;)
+  </span>
 
-    <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
+  <button class="btn " type="button" name="button" (click)="closeAlert()">Fermer</button>
 </alert>

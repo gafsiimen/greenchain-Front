@@ -6,7 +6,6 @@
 /* belongs to signpopup*/
 
 
-
 * {
     box-sizing: border-box;
 }
@@ -115,6 +114,7 @@ header .container .col-md-7 h1 {
     font-weight: bold;
     padding: 0.1em 0em;
     left: 100px;
+    
 }
 
 header .container .col-md-7 p {
@@ -155,7 +155,7 @@ header .container .col-md-7 p {
 /********** section 1 **************/
 
 .section-1 {
-    padding: 20vmin 0vmin;
+    padding: 20vmin 5vmin;
     margin-bottom: 100px;
 }
 
@@ -561,7 +561,8 @@ footer .column i+i {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 100px 0
+    padding: 100px 0;
+    margin-bottom: 40px;
 }
 
 .main-informations .box .infos h2 {
@@ -615,8 +616,8 @@ footer .column i+i {
 }
 
 .logo img {
-    width: 100px;
-    border: 0;
+    width: 13vw
+    
 }
 
 footer {

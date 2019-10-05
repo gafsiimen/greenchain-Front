@@ -1,3 +1,22 @@
+@media (min-width: 1675px) {
+    .navbar li {
+      margin-left: 3em;
+      margin-right: 1em;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 header.comment-marche-header {
     background-color: #0045f1 !important;
     --Sniglet-font: "Sniglet", cursive;
@@ -14,7 +33,8 @@ header.comment-marche-header {
     -webkit-clip-path: polygon(100% 0, 100% 88%, 52% 100%, 55% 94%, 0 100%, 0 0);
     clip-path: polygon(100% 0, 100% 88%, 52% 100%, 55% 94%, 0 100%, 0 0);
     position: relative;
-    height: 500px;
+    height: 85vh ;
+    /* height: 500px; */
     /* display: block;
     overflow: auto; */
 }
@@ -71,10 +91,6 @@ header.comment-marche-header {
     margin-bottom: 300px;
 }
 
-.last-content {
-    background-color: #f5f8fe;
-    height: 700px;
-}
 
 .last-content-text {
     font-size: 28px;
@@ -101,31 +117,8 @@ p {
 }
 
 
-/* img configuration */ 
-
-
- .cc-img img{
-    margin-top: -80px;
-    margin-right: 10px;
-
-}
-
-.que-faire-img img{
-    margin-left: 200px;
-    margin-top: -80px;
-    width: 60%;
-}
-
-
-
-
-
-/* img configuration */
-
 /* button **************************/
 
-
-/* ************************** */
 
 .btn:not([ta-button]) {
     display: inline-block;
