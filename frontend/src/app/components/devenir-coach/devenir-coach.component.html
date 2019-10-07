@@ -8,7 +8,7 @@
     </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="mr-auto"></div>
-                <ul class="navbar-nav">
+                <ul class="navbar-nav" style="text-align: center;">
                     <li class="nav-item">
                         <a class="nav-link" [routerLink]="[ '/devenir-trieur']"> DEVENIR TRIEUR</a>
 
@@ -46,24 +46,24 @@
 
 
 <div class="container-trieur min-vh-100 container-fluid">
-        <div class="row-fluid d-flex align-items-center">
-          <div class="col-7 text-white ">
+    <div class="row-fluid d-flex align-items-center">
+        <div class="col-7 text-white ">
             <h1 class="h1-trieur">
-        Qu’est-ce qu’un <span style="color: #37e6c7; font-size: 70px;"> Coach</span> ?
-    </h1>
-    <br>
-    
+                Qu’est-ce qu’un <span style="color: #37e6c7; font-size: 70px;"> Coach</span> ?
+            </h1>
+            <br>
 
-    <h2 class="h2-trieur">Un Coach c’est Mohamed, Blandine, Mohktar ou Lisette. </h2>
-    <h2 class="h2-trieur">Ils sont <span style="font-weight: bold"> retraités, imagiers, gardiens d’immeuble,
+
+            <h2 class="h2-trieur">Un Coach c’est Mohamed, Blandine, Mohktar ou Lisette. </h2>
+            <h2 class="h2-trieur">Ils sont <span style="font-weight: bold"> retraités, imagiers, gardiens d’immeuble,
     <br> animateurs, épiciers, éducateurs, ...</span> </h2>
-    
-          </div>
 
-          <div class="col-5">
-        <img src="/assets/img/Picto_Coach.png" alt="Logo Trieur" class="img-fluid" />
+        </div>
+
+        <div class="col-5">
+            <img src="/assets/img/Picto_Coach.png" alt="Logo Trieur" class="img-fluid" />
+        </div>
     </div>
-</div>
 </div>
 
 <section class="section-3 container-fluid p-0 text-center" id="div-hidden-test" style="display: none; ">
@@ -128,23 +128,27 @@
 
             </div>
             <div class="form-container sign-in-container">
-                <form class="form-sign-fn-up">
+                <form #g="ngForm" class="form-sign-fn-up">
                     <h1 class="inscrivez-vous">Se Connecter</h1>
                     <div class="login">
-                        <div *ngIf="error != ''" class="alert alert-danger" role="alert">
-                            <br>
-                            <alert type="danger">
-                                <strong>Opps!</strong> <br>
-                                <ul>
-                                    <li>{{error}}</li>
-                                </ul>
+                        <div *ngIf="error != ''" class="alert alert-danger">
+
+                            <strong>Opps!</strong>
+                            <p>{{error}}</p>
+
+                        </div>
+                        <div *ngIf="successfulLogin ==true" class="alert alert-success" role="alert">
+
+                            <alert type="success">
+                                <strong>Bienvenue {{firstname}} ^^ </strong> <br>
+
                             </alert>
                         </div>
                     </div>
-                    <input class="input-sign-in-all" name="email" type="email" [(ngModel)]="loginData.email" placeholder="Votre adresse email" />
-                    <input class="input-sign-in-all" name="password" type="password" [(ngModel)]="loginData.password" placeholder="Votre mot de passe" />
+                    <input class="input-sign-in-all" name="email" type="email" required [(ngModel)]="loginData.email" placeholder="Votre adresse email" />
+                    <input class="input-sign-in-all" name="password" type="password" required minlength="6" [(ngModel)]="loginData.password" placeholder="Votre mot de passe" />
                     <a class="forgot-yout-password" href="#">Mot de passe oublié?</a>
-                    <button class="sign-in" type="button" (click)="onLogin()">Se Connecter </button>
+                    <button class="sign-in" type="button" [disabled]="!isValid(g)" (click)="onLogin()">Se Connecter </button>
 
                 </form>
             </div>
@@ -196,5 +200,3 @@
 
 
 <app-unauthed-footer></app-unauthed-footer>
-
-

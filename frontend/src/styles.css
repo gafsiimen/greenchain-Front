@@ -5,7 +5,6 @@
 
 /* belongs to signpopup*/
 
-
 * {
     box-sizing: border-box;
 }
@@ -114,7 +113,6 @@ header .container .col-md-7 h1 {
     font-weight: bold;
     padding: 0.1em 0em;
     left: 100px;
-    
 }
 
 header .container .col-md-7 p {
@@ -199,7 +197,7 @@ header .container .col-md-7 p {
 
 /*  Section 2  */
 
-.cover {
+/* .cover {
     width: 100%;
     height: 55vmin;
     background: url("./assets/img/pexels-photo-452738.jpeg");
@@ -208,7 +206,7 @@ header .container .col-md-7 p {
     position: relative;
 }
 
-.cover .overlay {
+.cover .overlay { 
     position: absolute;
     top: 0;
     left: 0;
@@ -234,7 +232,7 @@ header .container .col-md-7 p {
     font-family: var(--Rubik);
     font-size: 2vmin;
     color: #e5e5e5;
-}
+} */
 
 .numbers .rect {
     position: relative;
@@ -617,7 +615,6 @@ footer .column i+i {
 
 .logo img {
     width: 13vw
-    
 }
 
 footer {

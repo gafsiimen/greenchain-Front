@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class DevenirTrieurComponent implements OnInit {
 
-  loginData = { email: 'trieur@example.comm', password: '123456' }
+  loginData = { email: 'trieur@example.com', password: '123456' }
   signupForm={
     email:null,
     password:null,
@@ -21,6 +21,8 @@ export class DevenirTrieurComponent implements OnInit {
   myForm:NgForm;
 
   error = '';
+  successfulLogin = false;
+  firstname: any;
 
   @Inject(DOCUMENT) document
   trieur: any;
@@ -86,11 +88,15 @@ export class DevenirTrieurComponent implements OnInit {
         this._signService.getMe().subscribe((value) => {
           localStorage.setItem('currentUser', JSON.stringify(value.data))
           console.log(JSON.parse(localStorage.getItem('currentUser')).firstname);
-          console.log('jadiiiiiiiiii');
+          this.firstname = value.data.firstname;
+          this.successfulLogin = true; 
 
-          //this.onLogin.emit(true);
-          // localStorage.setItem('logged', 'true');
-          //this._router.navigate(['/profile']);
+
+          setTimeout(() => {
+            this.router.navigate(['/trieur-dashboard']);
+          }, 4000);
+
+
         });
       }, err => {
         //this.spinnerService.hide();
@@ -98,8 +104,9 @@ export class DevenirTrieurComponent implements OnInit {
         //console.log (this.errMsgArr[0]);
         this.error = err.error.error;
         console.log(err.error.error);
-        console.log('this.error = ' , this.error);
       });
+
+
 
   }
 

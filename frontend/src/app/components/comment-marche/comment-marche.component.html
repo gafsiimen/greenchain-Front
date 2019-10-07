@@ -1,100 +1,97 @@
 <header class="comment-marche-header">
-  <div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg" id="navbar">
-      <a class="navbar-brand" [routerLink]="[ '/']">
-        <i class="fas nav-link fa-recycle"> GreenChain</i></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg" id="navbar">
+            <a class="navbar-brand" [routerLink]="[ '/']">
+                <i class="fas nav-link fa-recycle"> GreenChain</i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-align-right text-light"></i>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="mr-auto"></div>
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" [routerLink]="[ '/devenir-trieur']"> DEVENIR TRIEUR</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="mr-auto"></div>
+                <ul class="navbar-nav" style="text-align: center;">
+                    <li class="nav-item active">
+                        <a class="nav-link" [routerLink]="[ '/devenir-trieur']"> DEVENIR TRIEUR</a>
 
-            <span class="sr-only">(current)</span>
+                        <span class="sr-only">(current)</span>
 
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="[ '/devenir-coach']"> DEVENIR COACH</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="[ '/comment-ca-marche']">COMMENT ÇA MARCHE ?</a>
-          </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="[ '/devenir-coach']"> DEVENIR COACH</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="[ '/comment-ca-marche']">COMMENT ÇA MARCHE ?</a>
+                    </li>
 
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="[ '/comment-ca-marche']" fileSaver [method]="'GET'"
-              [fileName]="'consigne.pdf'" [url]="'assets/consigne.pdf'">CONSIGNE DE TRI</a>
-          </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="[ '/comment-ca-marche']" fileSaver [method]="'GET'" [fileName]="'consigne.pdf'" [url]="'assets/consigne.pdf'">CONSIGNE DE TRI</a>
+                    </li>
 
 
-          <li class="nav-item shop">
-            <button class="popup" [routerLink]="[ '/boutique']"><img src="/assets/img/shop.png" class="shop-icon">
+
+                    <li class="nav-item shop">
+                        <button class="popup" [routerLink]="[ '/boutique']"><img src="/assets/img/shop.png" class="shop-icon">
             </button>
-          </li>
+                    </li>
 
-          <li class="nav-item profile">
+                    <li class="nav-item profile">
 
-            <button class="popup" id="popup" (click)="popit()"> <img src="/assets/img/profile.png">
+                        <button class="popup" id="popup" (click)="popit()"> <img src="/assets/img/profile.png">
             </button>
-          </li>
+                    </li>
 
-        </ul>
-      </div>
-    </nav>
-  </div>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
 </header>
 
 
 
 <div class="container-comment-marche container-fluid">
-  <h1 class="h1-trieur">
-    Comment trier avec <span style="color: #37e6c7; "> GreenChain</span> ?
-  </h1>
-  <h2 class="h2-trieur">Envie de créer une <span style="font-weight: bold">communauté ? </span>
-    <br> Que faire de mon
-    <span style="font-weight: bold">sac ? </span><br> Obtenir des
-    <span style="font-weight: bold">récompenses ! </span><br>
+    <h1 class="h1-trieur">
+        Comment trier avec <span style="color: #37e6c7; "> GreenChain</span> ?
+    </h1>
+    <h2 class="h2-trieur">Envie de créer une <span style="font-weight: bold">communauté ? </span>
+        <br> Que faire de mon
+        <span style="font-weight: bold">sac ? </span><br> Obtenir des
+        <span style="font-weight: bold">récompenses ! </span><br>
 
-    <span style="font-weight: bold">On vous dit tout ! </span>
-  </h2>
+        <span style="font-weight: bold">On vous dit tout ! </span>
+    </h2>
 </div>
 
 
 
 
 <div class="box-comment-marche">
-  <h2 style="color: #37e6c7;" class=" H2-Comment-trier display-4 ">
-    Comment trier avec GreenChain ? </h2>
-  <br>
+    <h2 style="color: #37e6c7;" class=" H2-Comment-trier display-4 ">
+        Comment trier avec GreenChain ? </h2>
+    <br>
 
-  <div class="box-1-flex">
+    <div class="box-1-flex">
 
-    <div class="comment-trier-liste">
-      <img src="./assets/img/list-1.png" alt="pic">
-    </div>
+        <div class="comment-trier-liste">
+            <img src="./assets/img/list-1.png" alt="pic">
+        </div>
 
-    <div class="list-1-text">
+        <div class="list-1-text">
 
-      <p><span class="bold">Créez votre profil</span> sur notre site.</p>
+            <p><span class="bold">Créez votre profil</span> sur notre site.</p>
 
-      <p> Inscrivez-vous en tant que <span class="bold">Trieur.</span></p>
+            <p> Inscrivez-vous en tant que <span class="bold">Trieur.</span></p>
 
-      <p><span class="bold">Vous choisissez le Coach GreenChain</span> le plus proche de chez vous ! </p>
+            <p><span class="bold">Vous choisissez le Coach GreenChain</span> le plus proche de chez vous ! </p>
 
-      <p><span class="bold">Vous contactez votre Coach</span> pour récupérer votre premier sac.</p>
-      <button class="btn btn-primary" [routerLink]="[ '/devenir-trieur']"><a
+            <p><span class="bold">Vous contactez votre Coach</span> pour récupérer votre premier sac.</p>
+            <button class="btn btn-primary" [routerLink]="[ '/devenir-trieur']"><a
           style="color:white; text-decoration: none;"> DEVENIR TRIEUR</a></button>
 
-      <p><span class="bold blue">Ça y est, vous faîtes partie de la famille GreenChain !</span> Échangez avec votre
-        Coach,
-        <br> vos voisins Trieurs, vos voisins tout court… <br>Car c’est tous ensemble que nous allons y arriver !
-      </p>
+            <p><span class="bold blue">Ça y est, vous faîtes partie de la famille GreenChain !</span> Échangez avec votre Coach,
+                <br> vos voisins Trieurs, vos voisins tout court… <br>Car c’est tous ensemble que nous allons y arriver !
+            </p>
+        </div>
     </div>
-  </div>
 
 
 </div>
@@ -106,287 +103,273 @@
 
 
 <div class="box-comment-marche">
-  <h2 style="color: #37e6c7;" class=" H2-Comment-trier display-4 ">
-    Vous voulez créer votre communauté <br>GreenChain ? </h2>
-  <br>
+    <h2 style="color: #37e6c7;" class=" H2-Comment-trier display-4 ">
+        Vous voulez créer votre communauté <br>GreenChain ? </h2>
+    <br>
 
-  <div class="container-fluid">
-    <div class="row-fluid d-flex">
-      <div class="col-1">
+    <div class="container-fluid">
+        <div class="row-fluid d-flex">
+            <div class="col-1">
 
-        <img src="./assets/img/liste-2.png" class="img-fluid">
+                <img src="./assets/img/liste-2.png" class="img-fluid">
 
-      </div>
-      <div class="col-7">
-        <div class="list-1-text">
+            </div>
+            <div class="col-7">
+                <div class="list-1-text">
 
-          <p><span class="bold">Créez votre profil</span> sur notre site.</p>
+                    <p><span class="bold">Créez votre profil</span> sur notre site.</p>
 
-          <p> Inscrivez-vous en tant que <span class="bold">Coach.</span></p>
+                    <p> Inscrivez-vous en tant que <span class="bold">Coach.</span></p>
 
 
-          <button class="btn btn-primary" [routerLink]="[ '/devenir-coach'] "><a
+                    <button class="btn btn-primary" [routerLink]="[ '/devenir-coach'] "><a
               style="color:white; text-decoration: none;"> DEVENIR COACH</a></button>
 
-          <p><span class="bold blue">Nos équipes prennent rapidement contact avec vous et c’est parti !</span>
-            <br>Vous venez de créer votre communauté de quartier, engagée contre la pollution plastique !
-          </p>
+                    <p><span class="bold blue">Nos équipes prennent rapidement contact avec vous et c’est parti !</span>
+                        <br>Vous venez de créer votre communauté de quartier, engagée contre la pollution plastique !
+                    </p>
+                </div>
+            </div>
+            <div class="col-5">
+                <img src="./assets/img/communote.png" class="img-fluid">
+            </div>
+            <!-- </div> -->
         </div>
-      </div>
-      <div class="col-5">
-        <img src="./assets/img/communote.png" class="img-fluid">
-      </div>
-      <!-- </div> -->
     </div>
-  </div>
 
 
-  <div class="comment-space"></div>
+    <div class="comment-space"></div>
 
 
 
-  <div class="box-comment-marche">
-    <h2 style="color: #37e6c7;" class=" H2-Comment-trier display-4 ">
-      Que faire de mon sac une fois plein ? </h2>
-  </div>
-  <br>
+    <div class="box-comment-marche">
+        <h2 style="color: #37e6c7;" class=" H2-Comment-trier display-4 ">
+            Que faire de mon sac une fois plein ? </h2>
+    </div>
+    <br>
 
 
-  <div class="container-fluid">
-    <div class="row-fluid d-flex">
-      <div class="col-1">
+    <div class="container-fluid">
+        <div class="row-fluid d-flex">
+            <div class="col-1">
 
 
-        <img src="./assets/img/liste-3.png" class="img-fluid">
-      </div>
-      <div class="col-6">
-        <div class="list-1-text">
+                <img src="./assets/img/liste-3.png" class="img-fluid">
+            </div>
+            <div class="col-6">
+                <div class="list-1-text">
 
-          <p style="margin-bottom: 45px;">Une fois votre sac orange rempli,<span class="bold"> vous le déposez chez
+                    <p style="margin-bottom: 45px;">Une fois votre sac orange rempli,<span class="bold"> vous le déposez chez
               votre
               Coach</span>.</p>
 
-          <p style="margin-bottom: 25px;">Une fois l’espace de stockage du Coach rempli,
-            <br> nous activons nos circuits de collecte avec nos partenaires.
-            <br> Tout est rapide et très bien rodé !</p>
+                    <p style="margin-bottom: 25px;">Une fois l’espace de stockage du Coach rempli,
+                        <br> nous activons nos circuits de collecte avec nos partenaires.
+                        <br> Tout est rapide et très bien rodé !</p>
 
 
 
 
-          <p><span class="bold blue">Les sacs sont ensuite acheminés vers l’usine la plus proche
+                    <p><span class="bold blue">Les sacs sont ensuite acheminés vers l’usine la plus proche
               <br> pour un recyclage à 100% en circuit court.</span>
 
-          </p>
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <img src="./assets/img/que-faire.png" class="img-fluid">
+            </div>
+
+
+
+
         </div>
-      </div>
-      <div class="col">
-        <img src="./assets/img/que-faire.png" class="img-fluid">
-      </div>
-
-
 
 
     </div>
 
 
-  </div>
 
 
 
 
 
 
-
-
-  <div class="comment-space"></div>
+    <div class="comment-space"></div>
 
 
 
-  <div class="box-comment-marche">
-    <h2 style="color: #37e6c7;" class=" H2-Comment-trier display-4 ">
-      Points & récompenses Comment les obtenir ? </h2>
-  </div>
-  <br>
-  <div class="container-fluid">
-    <div class="row-fluid d-flex align-items-center">
-      <div class="col-7">
-        <div class="box-1-flex">
+    <div class="box-comment-marche">
+        <h2 style="color: #37e6c7;" class=" H2-Comment-trier display-4 ">
+            Points & récompenses Comment les obtenir ? </h2>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <div class="row-fluid d-flex align-items-center">
+            <div class="col-7">
+                <div class="box-1-flex">
 
-          <div class="comment-trier-liste">
-            <img src="./assets/img/liste-4.png" alt="pic">
-          </div>
+                    <div class="comment-trier-liste">
+                        <img src="./assets/img/liste-4.png" alt="pic">
+                    </div>
 
-          <div class="list-1-text">
+                    <div class="list-1-text">
 
-            <p style="margin-bottom: 45px;"><span class="bold">Rapportez votre sac plein à votre Coach</span>, ça vous
-              crédite
-              des points et à lui aussi !</p>
+                        <p style="margin-bottom: 45px;"><span class="bold">Rapportez votre sac plein à votre Coach</span>, ça vous crédite des points et à lui aussi !</p>
 
-            <p style="margin-bottom: 52px;"><span class="bold">125 points</span> sur le compte du Trieur et 25 points
-              sur
-              le
-              compte du Coach.</p>
+                        <p style="margin-bottom: 52px;"><span class="bold">125 points</span> sur le compte du Trieur et 25 points sur le compte du Coach.</p>
 
-            <p>Les points s’accumulent sur les comptes.</p>
+                        <p>Les points s’accumulent sur les comptes.</p>
 
-            <button class="btn btn-primary"><img style="width:10%; margin-top: -5px;  margin-right: 15px;"
+                        <button class="btn btn-primary"><img style="width:10%; margin-top: -5px;  margin-right: 15px;"
                 src="/assets/img/shop.png"> SUR LA BOUTIQUE</button>
 
-            <p><span class="bold blue">Ensuite, direction la boutique pour les échanger contre la
-                récompense de votre choix</span> <br> (place de cinéma, match de foot, sortie culturelle, réductions
-              sur
-              les
-              transports,…).
-            </p>
-          </div>
+                        <p><span class="bold blue">Ensuite, direction la boutique pour les échanger contre la
+                récompense de votre choix</span> <br> (place de cinéma, match de foot, sortie culturelle, réductions sur les transports,…).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+
+                <img src="./assets/img/bonus.png" class="img-fluid">
+            </div>
         </div>
-      </div>
-      <div class="col">
-
-        <img src="./assets/img/bonus.png" class="img-fluid">
-      </div>
     </div>
-  </div>
 
-  <section class="section-3 container-fluid p-0 text-center" id="div-hidden-test" style="display: none; ">
-    <!-- <button id="popup" (click)="popit()"> Open Popup</button> -->
-    <!--  signIN     -->
+    <section class="section-3 container-fluid p-0 text-center" id="div-hidden-test" style="display: none; ">
+        <!-- <button id="popup" (click)="popit()"> Open Popup</button> -->
+        <!--  signIN     -->
 
-    <div class="all">
-      <div class="signin-signup-div" id="signin-signup-div">
+        <div class="all">
+            <div class="signin-signup-div" id="signin-signup-div">
 
-        <div class="form-container sign-up-container">
-          <div class="close" id='closeSignin' (click)="closein()">+</div>
+                <div class="form-container sign-up-container">
+                    <div class="close" id='closeSignin' (click)="closein()">+</div>
 
-          <form class="form-sign-fn-up" #f="ngForm">
-            <div class="content">
-              <div class="roles">
-                <div class="role">
-                  <h1 class="inscrivez-vous">
-                    Inscrivez-vous
-                  </h1>
-                  <h4 class="title">Quel rôle souhaitez-vous avoir ?</h4>
-                  <label class="sorter">
+                    <form class="form-sign-fn-up" #f="ngForm">
+                        <div class="content">
+                            <div class="roles">
+                                <div class="role">
+                                    <h1 class="inscrivez-vous">
+                                        Inscrivez-vous
+                                    </h1>
+                                    <h4 class="title">Quel rôle souhaitez-vous avoir ?</h4>
+                                    <label class="sorter">
                     <input type="radio" name="role" [(ngModel)]="signupForm.role" value="trieur" required>
                     Devenir Trieur
                   </label>
 
-                  <label>
+                                    <label>
                     <input type="radio" name="role" [(ngModel)]="signupForm.role" value="coach" required>
                     Devenir Coach
                   </label>
 
-                </div>
+                                </div>
 
-                <div class="city">
-                  <h4 class="title">Et où habitez-vous ?</h4>
-                  <p class="desc"></p>
-                  <div>
-                    <select class="select-wrapper" ngModel id="cities" name="city" required>
+                                <div class="city">
+                                    <h4 class="title">Et où habitez-vous ?</h4>
+                                    <p class="desc"></p>
+                                    <div>
+                                        <select class="select-wrapper" ngModel id="cities" name="city" required>
                       <option class="options-list" value="" disabled="" selected="">
                         Choisissez votre
                         ville</option>
                       <option class="options-list">Abidjan</option>
 
                     </select>
-                  </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <input class="input-sign-in-all" type="email" [(ngModel)]="signupForm.email" email required placeholder="Votre adresse mail" name="email" />
+                        <input class="input-sign-in-all" type="password" minlength="6" required [(ngModel)]="signupForm.password" placeholder="Votre mot de passe" name="password" />
+                        <button class="sign-in" type="button" [disabled]="!isValid(f)" (click)="onSignUp(f)">Je m'inscris</button>
+
+                    </form>
 
                 </div>
-              </div>
+                <div class="form-container sign-in-container">
+                    <form #g="ngForm" class="form-sign-fn-up">
+                        <h1 class="inscrivez-vous">Se Connecter</h1>
+                        <div class="login">
+                            <div *ngIf="error != ''" class="alert alert-danger">
 
+                                <strong>Opps!</strong>
+                                <p>{{error}}</p>
+
+                            </div>
+                            <div *ngIf="successfulLogin ==true" class="alert alert-success" role="alert">
+
+                                <alert type="success">
+                                    <strong>Bienvenue {{firstname}} ^^ </strong> <br>
+
+                                </alert>
+                            </div>
+                        </div>
+                        <input class="input-sign-in-all" name="email" type="email" required [(ngModel)]="loginData.email" placeholder="Votre adresse email" />
+                        <input class="input-sign-in-all" name="password" type="password" required minlength="6" [(ngModel)]="loginData.password" placeholder="Votre mot de passe" />
+                        <a class="forgot-yout-password" href="#">Mot de passe oublié?</a>
+                        <button class="sign-in" type="button" [disabled]="!isValid(g)" (click)="onLogin()">Se Connecter </button>
+
+                    </form>
+                </div>
+                <div class="overlay-container">
+                    <div class="overlay">
+                        <div class="overlay-panel overlay-left">
+                            <h1>Soyez le Bienvenue!</h1>
+                            <p class="to-keep" style="color: white">Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles.
+                            </p>
+                            <input class="sign-in ghost" id="signIn" type="button" (click)="signInButton()" value="Se Connecter">
+                        </div>
+                        <div class="overlay-panel overlay-right">
+                            <div class="close" id='closeSignin' (click)="closein()">+</div>
+                            <h1>Salut l'ami!</h1>
+                            <p style="color: white" class="enter-your">Entrez vos informations personnelles et commencez le voyage avec nous
+                            </p>
+                            <input class="sign-in ghost" id="signUp" type="button" (click)="signUpButton()" value="S'inscrire">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <input class="input-sign-in-all" type="email" [(ngModel)]="signupForm.email" email required
-              placeholder="Votre adresse mail" name="email" />
-            <input class="input-sign-in-all" type="password" minlength="6" required [(ngModel)]="signupForm.password"
-              placeholder="Votre mot de passe" name="password" />
-            <button class="sign-in" type="button" [disabled]="!isValid(f)" (click)="onSignUp(f)">Je m'inscris</button>
-
-          </form>
-
         </div>
-        <div class="form-container sign-in-container">
-          <form class="form-sign-fn-up">
-            <h1 class="inscrivez-vous">Se Connecter</h1>
-            <div class="login">
-              <div *ngIf="error != ''" class="alert alert-danger" role="alert">
-                <br>
-                <alert type="danger">
-                  <strong>Opps!</strong> <br>
-                  <ul>
-                    <li>{{error}}</li>
-                  </ul>
-                </alert>
-              </div>
-            </div>
-            <input class="input-sign-in-all" name="email" type="email" [(ngModel)]="loginData.email"
-              placeholder="Votre adresse email" />
-            <input class="input-sign-in-all" name="password" type="password" [(ngModel)]="loginData.password"
-              placeholder="Votre mot de passe" />
-            <a class="forgot-yout-password" href="#">Mot de passe oublié?</a>
-            <button class="sign-in" type="button" (click)="onLogin()">Se Connecter </button>
 
-          </form>
-        </div>
-        <div class="overlay-container">
-          <div class="overlay">
-            <div class="overlay-panel overlay-left">
-              <h1>Soyez le Bienvenue!</h1>
-              <p class="to-keep" style="color: white">Pour rester connecté avec nous, veuillez vous connecter avec vos
-                informations personnelles.
-              </p>
-              <input class="sign-in ghost" id="signIn" type="button" (click)="signInButton()" value="Se Connecter">
-            </div>
-            <div class="overlay-panel overlay-right">
-              <div class="close" id='closeSignin' (click)="closein()">+</div>
-              <h1>Salut l'ami!</h1>
-              <p style="color: white" class="enter-your">Entrez vos informations personnelles et commencez le voyage
-                avec
-                nous</p>
-              <input class="sign-in ghost" id="signUp" type="button" (click)="signUpButton()" value="S'inscrire">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </section>
+    </section>
 
 
 
 
 
 
-  <div class="container-fluid" style="background-color: #f5f8fe;">
+    <div class="container-fluid" style="background-color: #f5f8fe;">
 
         <div class="text-center">
-    <img 
-    class="img-fluid rounded" style="margin-top: 4%; margin-bottom: 4%"
-      src="./assets/img/devenir-trieur-et-coach.png">
+            <img class="img-fluid rounded" style="margin-top: 4%; margin-bottom: 4%" src="./assets/img/devenir-trieur-et-coach.png">
 
         </div>
 
-    <p class="last-content-text"><span class="bold ">Vous voyez, GreenChain c’est un jeu d’enfant !</span></p>
+        <p class="last-content-text"><span class="bold ">Vous voyez, GreenChain c’est un jeu d’enfant !</span></p>
 
-    <p class="last-content-text">Et si on s’y met tous ensemble : habitants, villes, entreprises ;<br> 100% de
-      plastique
-      recyclé, on va y arriver !</p>
+        <p class="last-content-text">Et si on s’y met tous ensemble : habitants, villes, entreprises ;<br> 100% de plastique recyclé, on va y arriver !</p>
 
 
 
 
-    <div class="text-center">
+        <div class="text-center">
 
-      <button class="btn btn-primary" [routerLink]="[ '/devenir-trieur']"><a
+            <button class="btn btn-primary" [routerLink]="[ '/devenir-trieur']"><a
           style="color:white; text-decoration: none; "> DEVENIR TRIEUR</a></button>
 
-      <button class="btn btn-primary" [routerLink]="[ '/devenir-coach'] "><a
+            <button class="btn btn-primary" [routerLink]="[ '/devenir-coach'] "><a
           style="color:white; text-decoration: none;">
           DEVENIR COACH</a></button>
 
+        </div>
+
     </div>
 
-  </div>
 
 
-
-  <app-unauthed-footer></app-unauthed-footer>
+    <app-unauthed-footer></app-unauthed-footer>

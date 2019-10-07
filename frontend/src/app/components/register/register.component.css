@@ -65,6 +65,14 @@ h3 {
     font-size: 14px
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    display: none;
+    padding: 0;
+    size: 25px;
+}
+
 .input-wrapper input[type=text],
 .input-wrapper input[type=number],
 .input-wrapper textarea {
